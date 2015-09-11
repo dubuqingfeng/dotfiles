@@ -1,0 +1,9 @@
+#!/bin/bash
+function crt
+{
+    user="$(whoami)";
+    host="$(ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d " " -f 2 )";
+    PWD="$(pwd)"
+
+    echo ${user}@${host}:${PWD}
+}
