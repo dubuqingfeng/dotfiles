@@ -5,7 +5,7 @@
 
 ![iMac-MacBook-flat](http://i.imgur.com/GBpjrHB.png)
 
-这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles-mac) 对自己的需求进行了修改。
+这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles-mac) 是基于zoumo的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
 
 更多的 dotfiles 请参考 [GitHub does dotfiles](https://dotfiles.github.io/)。
 
@@ -30,9 +30,13 @@
 
 ## Install Xcode
 
-1. 安装Xcode
-2. 更新APP store
+1. 更新APP store
+2. 安装Xcode
 3. 安装Xcode Command Line Tools
+//输入gcc或者git，会提示
+```
+xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. Choose an option in the dialog to download the command Line developer tools.
+```
 
 ```bash
 $ xcode-select --install
@@ -64,7 +68,7 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对vim, ls, terminal进行美化, 主要是安装了solarized配色和powerline状态栏
 
-完成之后, 手动安装一些其他软件(Sublime3, Alfred, 以及一些较大的软件java, mysql, mongodb, nginx, jmeter)
+完成之后, 手动安装一些其他软件(Sublime3, Alfred, 以及一些较大的软件java, mysql, mongodb, nginx, jmeter,docker)
 
 ## Restore backup
 
@@ -78,14 +82,12 @@ $ mackup restore
 
 ## dotfiles
 
-### 软件更新
-
 执行 `~/.dotfiles/script/bootstrap` 的时候，脚本会将目录底下所有的 `*.symlink` 文件通过 `ln` 命令建立链接至 `$HOME` 目录底下:
 
 | topic  | *.symlink          | .dotfiles     |
 | ------ | ------------------ | ------------- |
 | git    | gitconfig.symlink  | ~/.gitconfig  |
-| git    | gitignore.symlink  | ~/.gitignore  |
+|     | gitignore.symlink  | ~/.gitignore  |
 | mackup | mackup.cfg.symlink | ~/.mackup.cfg |
 | vim    | vimrc.symlink      | ~/.vimrc      |
 | zsh    | zshrc.symlink      | ~/.zshrc      |
@@ -105,7 +107,7 @@ $ mackup restore
 - **topic/path.zsh**: 任何 `path.zsh` 结尾的文件会在 shell 执行时优先载入。
 - **topic/*.symlink**: 任何 `*.symlink` 結尾的文件都会在 `$HOME` 目录下建立链接。
 
-不同于 [Holman's dotfiles](https://github.com/holman/dotfiles)，我修改了一些部分:
+不同于 [Holman's dotfiles](https://github.com/holman/dotfiles)，修改了一些部分:
 
 - Shell 的部分改用 [Oh My Zsh](http://ohmyz.sh/)取代原作者自己配置的 zsh。
 - 移除 **topic/aliases.zsh**、**topic/completion.zsh** 等文件，改用 Oh My Zsh 的 [plugins]。(https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins) 代替。
@@ -206,7 +208,6 @@ apps=(
 | mysql | 数据库 |
 | mongodb | 数据库 |
 | nginx | 反向代理 |
-| node | nodejs |
 
 #### Apps
 
@@ -214,6 +215,7 @@ apps=(
 | --- | --- |
 | java | java |
 | robomango | mongodb客户端 |
+| Shadowsocks | Bypass firewall |
 
 ### OS X defaults setting
 
@@ -224,7 +226,6 @@ apps=(
 
 | setting | script |
 | ------ | --- |
-| 关闭电源进入深度睡眠 | `sudo pmset -a autopoweroff 0` |
 | 关闭电源进入深度睡眠 | `sudo pmset -a autopoweroff 0` |
 | 加快窗口 resize 的速度(Cocoa applications)  | `defaults write NSGlobalDomain NSWindowResizeTime -float 0.001` |
 | 预设展开存储窗口(1) | `defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true` |
@@ -253,14 +254,14 @@ apps=(
 | 显示所有拓展名 | `defaults write NSGlobalDomain AppleShowAllExtensions -bool true` |
 | 显示 Finder 状态栏 | `defaults write com.apple.finder ShowStatusBar -bool true` |
 | 显示 Finder 路径栏 | `defaults write com.apple.finder ShowPathbar -bool true` |
-| 允许框选 Finde Quick Look 的文字 | `defaults write com.apple.finder QLEnableTextSelection -bool true` |
+| 允许框选 Finder Quick Look 的文字 | `defaults write com.apple.finder QLEnableTextSelection -bool true` |
 | 预设搜索的结果默认为当前的目录下 | `defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"` |
 | 关闭更改拓展名的警告提示 | `defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false` |
 | 开启资料夹的 spring loading 功能 | `defaults write NSGlobalDomain com.apple.springing.enabled -bool true` |
 | 开启 Dock 的 spring loading 功能 | `defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true` |
 | 移除 spring loading 的延迟 | `defaults write NSGlobalDomain com.apple.springing.delay -float 0` |
 | 避免在 network volumes 底下建立 .DS_Store 档案 | `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true` |
-| 使用 column view 作為 Finder 預設顯示選項 | `defaults write com.apple.finder FXPreferredViewStyle -string "clmv"` |
+| 使用 column view 作为 Finder 预设显示选项 | `defaults write com.apple.finder FXPreferredViewStyle -string "clmv"` |
 | 将窗口最小化到应用程序图标 | `defaults write com.apple.dock minimize-to-application -bool true` |
 | 在 Dock 中为打开的应用程序显示指示灯 | `defaults write com.apple.dock show-process-indicators -bool true` |
 | 关闭 Dashboard | `defaults write com.apple.dashboard mcx-disabled -bool true` |
@@ -268,17 +269,16 @@ apps=(
 | 自动显示和隐藏dock | `defaults write com.apple.dock autohide -bool true` |
 | 将隐藏的应用程序 Dock 图标用半透明显示 | `defaults write com.apple.dock showhidden -bool true` |
 
+//	Finder默认位置设置为个人
 
 ## Beautify
 
-
 美化至少要对三个工具进行配色Terminal, vim, ls
-我使用solarized来进行终端美化, 它提供了一套比较完整的解决方案, 但是作者没有给ls配色, 所以使用另外一个作者 
+使用solarized来进行终端美化, 它提供了一套比较完整的解决方案, 但是作者没有给ls配色, 所以使用另外一个作者 
 [seebi](https://github.com/seebi/) 的 [dircolors-solarized](https://github.com/seebi/dircolors-solarized.git)
-另外我还在terminal中加入powerline状态栏来增强效果
+另外还在terminal中加入powerline状态栏来增强效果
 
 下面展示的是完整的美化过程, 在dotfiles中除了更改字体需要手动修改, 大部分的工作都自动完成了
-
 
 ```bash
 $ git clone https://github.com/altercation/solarized.git ~/plugins
@@ -431,22 +431,20 @@ $ mackup backup
 $ mackup restore
 ```
 
-以下是目前我备份的应用程序：
+以下是目前备份的应用程序：
 
 
 | app | backup-conf |
 | --- | --- |
 | git | ~/.gitconfig和.config/git/ignore |
 | mackup | ~/.mackup.cfg和~/.mackup |
-| dash | 默认配置 |
 | iterm2 | 默认配置 |
 | oh-my-zsh | ~/.oh-my-zsh |
 | scroll-reverser | 默认配置 |
 | slate | ~/.slate |
 | sublime-text-3 | plugins和config |
 | pycharm40 | config |
-| goagentx | config |
-| vim | ~/.vimrc和~/.vim |
+| vim | ~/.vimrc 和~/.vim |
 
 
 更多详细的配置说明和支持软件请查看 [mackup 的文件](https://github.com/lra/mackup/tree/master/doc)。
@@ -466,14 +464,13 @@ alias rm="trash" # 这个需要brew install trash
 
 ## Issue
 
-有一些程序我使用的破解版本, 需要手动安装
+有一些程序使用的破解版本, 需要手动安装
 以及有一些brew cask安装不上的app
 
 | name | 说明 |
 | --- | --- |
-| Sublime Text 3 | 我最喜欢的Editor |
+| Sublime Text 3 | Editor |
 | Alfred | workflow神器 |
-| Dash | API查询神器 |
 | Airmail2 | 漂亮的邮件客户端 |
 | MindNode Pro | 简单漂亮的思维导图 |
 | clipmenu | 粘贴板增强 |
@@ -488,6 +485,8 @@ alias rm="trash" # 这个需要brew install trash
 | [qlstephen](http://whomwah.github.io/qlstephen/) | 让 Quick Look 支持无后拓展名的纯文本 |
 | [font-roboto](http://www.google.com/fonts/specimen/Roboto) | Roboto字体 |
 
+## 软件更新
+
 ## Reference
 
 - [Hacker's Guide to Setting up Your Mac](http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac)
@@ -496,12 +495,4 @@ alias rm="trash" # 这个需要brew install trash
 - [如何優雅地在 Mac 上使用 dotfiles?](http://segmentfault.com/a/1190000002713879)
 - [osx-for-hackers.sh](https://gist.github.com/brandonb927/3195465)
 - [Mackup](https://github.com/lra/mackup/tree/master/doc)
-- [我的mac-dev-setup](https://github.com/zoumo/mac-dev-setup)
-
-## Thanks
-
-I forked [Amowu](https://github.com/amowu/)'s [dotfiles](https://github.com/amowu/dotfiles.git) base on [Zach Holman](http://github.com/holman)'s excellent [dotfiles](http://github.com/holman/dotfiles).
-
-## GitHub
-
-这是我的[dotfiles](https://github.com/zoumo/dotfiles)欢迎fork
+- [mac-dev-setup](https://github.com/zoumo/mac-dev-setup)

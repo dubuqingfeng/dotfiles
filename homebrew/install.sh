@@ -21,7 +21,6 @@ binaries=(
   trash
   # mysql
   # nginx
-  # node
   # mongodb
   # boot2docker
   # docker
@@ -30,7 +29,6 @@ binaries=(
   # legit
   # nvm
   # ssh-copy-id
-  # trash
 
 )
 
@@ -40,24 +38,19 @@ apps=(
   google-chrome
   macdown  # markdown编辑器
   iterm2 # 加强版终端
+  firefox
   scroll-reverser  # 可以分别鼠标和触控板滚动方向
   slate  # 开源免费的桌面窗口控制调整工具
   beyond-compare  # 优秀的文件比较软件
   the-unarchiver  # 免费的解压软件
   # clipmenu  # 粘贴版扩展 0.4.3
-  sourcetree  # git 管理
+  # sourcetree  # git 管理
   lingon-x # 启动项管理
   appzapper  # app卸载器
   xtrafinder  # 加强finder
   # mou
-  # alfred
   # dash
   evernote
-  # flux
-  # keka
-  # kitematic
-  # obs
-  # recordit
   # sublime-text3
   # virtualbox
   # vlc
