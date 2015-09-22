@@ -19,6 +19,7 @@ binaries=(
   tmux
   htop
   trash
+  proxychains-ng
   # mysql
   # nginx
   # mongodb
@@ -34,21 +35,22 @@ binaries=(
 
 # Apps
 apps=(
-  # java
+  java
   google-chrome
-  # macdown  # markdown编辑器
+  # macdown  # markdown编辑器 (速度慢)
   iterm2 # 加强版终端
   firefox
   scroll-reverser  # 可以分别鼠标和触控板滚动方向
   slate  # 开源免费的桌面窗口控制调整工具
   beyond-compare  # 优秀的文件比较软件
   the-unarchiver  # 免费的解压软件
+  android-studio # 较大
   # clipmenu  # 粘贴版扩展 0.4.3
-  # sourcetree  # git 管理
+  # sourcetree  # git 管理 (被q)
   lingon-x # 启动项管理
   appzapper  # app卸载器
   xtrafinder  # 加强finder
-  #Caskroom/cask/shadowsocksx #Shadowsocks...
+  # shadowsocksx #Shadowsocks...
   # mou
   # dash
   evernote
