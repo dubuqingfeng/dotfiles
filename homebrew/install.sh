@@ -36,7 +36,7 @@ binaries=(
 apps=(
   # java
   google-chrome
-  macdown  # markdown编辑器
+  # macdown  # markdown编辑器
   iterm2 # 加强版终端
   firefox
   scroll-reverser  # 可以分别鼠标和触控板滚动方向
@@ -48,6 +48,7 @@ apps=(
   lingon-x # 启动项管理
   appzapper  # app卸载器
   xtrafinder  # 加强finder
+  #Caskroom/cask/shadowsocksx #Shadowsocks...
   # mou
   # dash
   evernote
