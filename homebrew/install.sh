@@ -20,11 +20,14 @@ binaries=(
   htop
   trash
   proxychains-ng
+
   # mysql
   # nginx
   # mongodb
+
   # boot2docker
   # docker
+
   # grc
   # hub
   # legit
@@ -51,12 +54,12 @@ apps=(
   appzapper  # app卸载器
   xtrafinder  # 加强finder
   # shadowsocksx #Shadowsocks...
-  # mou
   # dash
   evernote
   # sublime-text3
   # virtualbox
   # vlc
+  # Postman
 )
 
 # Fonts
