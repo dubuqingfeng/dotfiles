@@ -23,6 +23,8 @@ plugins=(
     pytz
     #backport of the new features
     unittest2
+    tornado
+    pymongo
 )
 
 pip install --upgrade pip

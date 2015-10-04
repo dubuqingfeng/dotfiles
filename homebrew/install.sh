@@ -53,6 +53,7 @@ apps=(
   lingon-x # 启动项管理
   appzapper  # app卸载器
   xtrafinder  # 加强finder
+  sequel-pro
   # shadowsocksx #Shadowsocks...
   # dash
   evernote
