@@ -25,6 +25,7 @@ plugins=(
     unittest2
     tornado
     pymongo
+    jinja2
 )
 
 pip install --upgrade pip
