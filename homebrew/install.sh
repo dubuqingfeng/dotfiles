@@ -58,9 +58,10 @@ apps=(
   # virtualbox
   # vlc
   # Postman
-
+  filezilla
   # xtrafinder  # 加强finder 10.11
-
+  vagrant
+  vagrant-manager
   # macdown  # markdown编辑器 (速度慢)
   # sourcetree  # git 管理 (被q)
   # sequel-pro
