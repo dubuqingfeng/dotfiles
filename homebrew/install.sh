@@ -54,7 +54,7 @@ apps=(
   # shadowsocksx #Shadowsocks...
   # dash
   evernote
-  # sublime-text3
+  sublime-text3
   # virtualbox
   # vlc
   # Postman
