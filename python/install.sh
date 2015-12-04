@@ -23,7 +23,11 @@ plugins=(
     pytz
     #backport of the new features
     unittest2
+    markdown
+    pelican
     tornado
+    tornado-mysql
+    tornado-redis
     pymongo
     jinja2
 )

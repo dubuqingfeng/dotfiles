@@ -44,9 +44,10 @@ apps=(
   firefox
   scroll-reverser  # 可以分别鼠标和触控板滚动方向
   slate  # 开源免费的桌面窗口控制调整工具
-  beyond-compare  # 优秀的文件比较软件
+  #beyond-compare  # 优秀的文件比较软件
   the-unarchiver  # 免费的解压软件
   android-studio # 较大
+  robomongo #mongodb
   # clipmenu  # 粘贴版扩展 0.4.3
   lingon-x # 启动项管理
   appzapper  # app卸载器
@@ -56,15 +57,14 @@ apps=(
   evernote
   sublime-text3
   # virtualbox
-  # vlc
   # Postman
   filezilla
-  # xtrafinder  # 加强finder 10.11
   vagrant
   vagrant-manager
   # macdown  # markdown编辑器 (速度慢)
   # sourcetree  # git 管理 (被q)
-  # sequel-pro
+  # sequel-pro #mysql client
+  xmind
 )
 
 # Fonts
