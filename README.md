@@ -197,7 +197,15 @@ apps=(
 | lingon-x | 启动项管理 |
 | appzapper | app卸载器 |
 | xtrafinder | finder加强 |
-
+| firefox | 火狐浏览器 |
+| evernote | 印象笔记 |
+| sublime-text3 | 一种编辑器 |
+| filezilla | ftp client |
+| xmind | 一种思维导图软件 |
+| vagrant | vagrant |
+| robomongo | mongodb client |
+| android-studio | android-studio |
+| pycharm-ce | 社区版pycharm |
 
 下面这些不太适合自动安装, 有些比较大, 有些可以不装
 
@@ -469,11 +477,11 @@ alias rm="trash" # 这个需要brew install trash
 
 | name | 说明 |
 | --- | --- |
-| Sublime Text 3 | Editor |
-| Alfred | workflow神器 |
-| Airmail2 | 漂亮的邮件客户端 |
-| MindNode Pro | 简单漂亮的思维导图 |
-| clipmenu | 粘贴板增强 |
+| beyond-compare | 兼容问题 |
+| postman | chrome-extendsion |
+| sequel-pro | mysql client |
+| Shadowsocks | --- |
+| Macdown | Markdown编辑器 |
 | sourcetree | git客户端 |
 
 还有一些压根装不上的
