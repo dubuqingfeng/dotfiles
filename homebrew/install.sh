@@ -53,7 +53,7 @@ apps=(
   appzapper  # app卸载器
   pycharm-ce
   # shadowsocksx #Shadowsocks...
-  # dash
+  dash
   evernote
   sublime-text3
   # virtualbox
