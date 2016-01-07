@@ -65,6 +65,7 @@ apps=(
   # sourcetree  # git 管理 (被q)
   # sequel-pro #mysql client
   xmind
+  licecap # 录屏gif软件
 )
 
 # Fonts
