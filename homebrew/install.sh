@@ -13,6 +13,7 @@ binaries=(
   ctags
   grc
   git-flow
+  subversion
   tree
   mackup
   z
