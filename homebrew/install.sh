@@ -13,7 +13,6 @@ binaries=(
   ctags
   grc
   git-flow
-  subversion
   tree
   mackup
   z
@@ -21,6 +20,8 @@ binaries=(
   htop
   trash
   proxychains-ng
+
+  # subversion
 
   # mysql
   # nginx
@@ -34,7 +35,6 @@ binaries=(
   # legit
   # nvm
   # ssh-copy-id
-
 )
 
 # Apps
@@ -44,29 +44,30 @@ apps=(
   iterm2 # 加强版终端
   firefox
   scroll-reverser  # 可以分别鼠标和触控板滚动方向
-  slate  # 开源免费的桌面窗口控制调整工具
-  #beyond-compare  # 优秀的文件比较软件
   the-unarchiver  # 免费的解压软件
   android-studio # 较大
-  robomongo #mongodb
-  # clipmenu  # 粘贴版扩展 0.4.3
+  robomongo # mongodb client
   lingon-x # 启动项管理
-  appzapper  # app卸载器
   pycharm-ce
-  # shadowsocksx #Shadowsocks...
-  dash
   evernote
   sublime-text3
-  # virtualbox
-  # Postman
   filezilla
   vagrant
   vagrant-manager
-  # macdown  # markdown编辑器 (速度慢)
-  # sourcetree  # git 管理 (被q)
-  # sequel-pro #mysql client
   xmind
   licecap # 录屏gif软件
+  dash 
+  appcleaner # 卸载软件
+  ccleaner # app清理软件
+  grandperspective # 磁盘空间分析软件
+  shortcat # 键盘辅助软件
+  # macdown # markdown编辑器
+  # sourcetree # git
+  # sequel-pro # mysql client
+  # shadowsocksx # shadowsocks
+  # beyond-compare # 对比软件
+  # virtualbox
+  # Postman chrome 扩展
 )
 
 # Fonts
