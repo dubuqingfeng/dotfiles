@@ -58,7 +58,6 @@ apps=(
   licecap # 录屏gif软件
   dash 
   appcleaner # 卸载软件
-  ccleaner # app清理软件
   grandperspective # 磁盘空间分析软件
   shortcat # 键盘辅助软件
   # macdown # markdown编辑器
