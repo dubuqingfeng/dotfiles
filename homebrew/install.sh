@@ -56,7 +56,8 @@ apps=(
   vagrant-manager
   xmind
   licecap # 录屏gif软件
-  dash 
+  dash
+  thunder 
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   # macdown # markdown编辑器
