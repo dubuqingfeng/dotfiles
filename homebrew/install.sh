@@ -60,6 +60,7 @@ apps=(
   thunder 
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
+  mactex
   # macdown # markdown编辑器
   # sourcetree # git
   # sequel-pro # mysql client
