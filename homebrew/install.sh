@@ -20,7 +20,7 @@ binaries=(
   htop
   trash
   proxychains-ng
-
+  pyenv
   # subversion
 
   # mysql
