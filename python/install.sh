@@ -31,6 +31,7 @@ plugins=(
     pymongo
     jinja2
     beautifulsoup4
+    scrapy
 )
 
 pip install --upgrade pip
