@@ -21,6 +21,7 @@ binaries=(
   trash
   proxychains-ng
   pyenv
+  gettext
   # subversion
 
   # mysql
