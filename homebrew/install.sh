@@ -22,14 +22,13 @@ binaries=(
   proxychains-ng
   pyenv
   gettext
+  # docker
+  # boot2docker
   # subversion
 
   # mysql
   # nginx
   # mongodb
-
-  # boot2docker
-  # docker
 
   # grc
   # hub
@@ -62,13 +61,25 @@ apps=(
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   mactex
+  intel-haxm
+  genymotion
+  # 
   # macdown # markdown编辑器
+  # 手动安装：
   # sourcetree # git
   # sequel-pro # mysql client
   # shadowsocksx # shadowsocks
   # beyond-compare # 对比软件
   # virtualbox
-  # Postman chrome 扩展
+  # qq
+  # 360yunpan
+  # 百度云客户端
+  # chrome 扩展:
+  # Postman
+  # google keep
+  # chromebook recovery
+  #####
+  # jadx
 )
 
 # Fonts
