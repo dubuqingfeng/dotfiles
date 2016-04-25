@@ -33,6 +33,7 @@ plugins=(
     jinja2
     beautifulsoup4
     scrapy
+    Pillow
 )
 
 pip install --upgrade pip

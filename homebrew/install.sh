@@ -63,6 +63,7 @@ apps=(
   mactex
   intel-haxm
   genymotion
+  wireshark --with-qt
   # 
   # macdown # markdown编辑器
   # 手动安装：
@@ -74,7 +75,9 @@ apps=(
   # qq
   # 360yunpan
   # 百度云客户端
-  # chrome 扩展:
+  # leanote
+  # jdk1.6
+  # chrome App:
   # Postman
   # google keep
   # chromebook recovery
