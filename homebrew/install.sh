@@ -25,7 +25,7 @@ binaries=(
   # docker
   # boot2docker
   # subversion
-
+  tomcat
   # mysql
   # nginx
   # mongodb
@@ -53,17 +53,20 @@ apps=(
   sublime-text3
   filezilla
   vagrant
-  vagrant-manager
+  # vagrant-manager
   xmind
   licecap # 录屏gif软件
-  dash
+  # dash
   thunder 
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   mactex
   intel-haxm
-  genymotion
+  # genymotion
   wireshark --with-qt
+  intellij-idea
+  charles
+  android-file-transfer
   # 
   # macdown # markdown编辑器
   # 手动安装：
@@ -74,7 +77,8 @@ apps=(
   # virtualbox
   # qq
   # 360yunpan
-  # 百度云客户端
+  # airdroid
+  # cs
   # leanote
   # jdk1.6
   # chrome App:
