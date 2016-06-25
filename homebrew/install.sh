@@ -22,10 +22,12 @@ binaries=(
   proxychains-ng
   pyenv
   gettext
+  netcat
+  
   # docker
   # boot2docker
   # subversion
-  tomcat
+  # tomcat
   # mysql
   # nginx
   # mongodb
@@ -47,7 +49,6 @@ apps=(
   the-unarchiver  # 免费的解压软件
   android-studio # 较大
   robomongo # mongodb client
-  lingon-x # 启动项管理
   pycharm-ce
   evernote
   sublime-text3
@@ -57,7 +58,6 @@ apps=(
   xmind
   licecap # 录屏gif软件
   # dash
-  thunder 
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   mactex
