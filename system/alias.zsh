@@ -6,3 +6,5 @@ alias tailf="tail -f"
 # python versions
 alias ve="pyenv local"
 alias rm="trash"
+alias g++="g++-4.8"
+alias gcc="gcc-4.8"

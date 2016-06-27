@@ -23,7 +23,9 @@ binaries=(
   pyenv
   gettext
   netcat
-  
+  gdb
+  homebrew/versions/gcc48
+
   # docker
   # boot2docker
   # subversion
