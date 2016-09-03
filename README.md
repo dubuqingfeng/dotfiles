@@ -175,7 +175,12 @@ apps=(
 | tmux | tmux |
 | htop | 加强版top |
 | [trash](http://hasseg.org/blog/post/406/trash-files-from-the-os-x-command-line/) | 模拟Finder的移到废纸篓功能, 在alias中对rm进行替换, 进行安全删除 |
-
+| proxychains-ng | 代理工具 |
+| pyenv | pyenv |
+| gettext | gettext |
+| netcat | netcat |
+| gdb | gdb |
+| homebrew/versions/gcc48 | homebrew/versions/gcc48 |
 
 #### Fonts
 
@@ -187,25 +192,30 @@ apps=(
 
 | name | info |
 | --- | --- |
+| java | java |
 | [google-chrome](www.google.com/chrome) | Google 浏览器 |
-| [macdown](http://macdown.uranusjr.com/) | Open source Markdown editor for OS X |
-| [iterm2](http://iterm2.com/) | 加强版终端 |
+| iterm2 | iterm2加强版终端 |
+| Firefox | 火狐浏览器 |
 | [scroll-reverser](http://pilotmoon.com/scrollreverser/) | 支持鼠标和触控板滚轮分别设置 |
-| [slate](https://github.com/jigish/slate) | Mac窗口调节程序,类似于Divvy and SizeUp |
-| [beyond-compare](http://www.scootersoftware.com/) | Beyond Compare 是一个优秀的文件/目录对比工具 |
 | the-unarchiver | 优秀免费的解压软件 |
-| lingon-x | 启动项管理 |
-| appzapper | app卸载器 |
-| xtrafinder | finder加强 |
-| firefox | 火狐浏览器 |
+| android-studio | Android开发 |
+| robomongo | mongodb client |
+| pycharm-ce | 社区版pycharm |
 | evernote | 印象笔记 |
 | sublime-text3 | 一种编辑器 |
 | filezilla | ftp client |
-| xmind | 一种思维导图软件 |
 | vagrant | vagrant |
-| robomongo | mongodb client |
-| android-studio | android-studio |
-| pycharm-ce | 社区版pycharm |
+| xmind | 一种思维导图软件 |
+| licecap | 一种录屏软件 |
+| appcleaner | app卸载软件 |
+| grandperspective | grandperspective # 磁盘空间分析软件 |
+| mactex | mac LaTeX |
+| intel-haxm | intel-haxm |
+| wireshark --with-qt | wireshark --with-qt |
+| intellij-idea | intellij-idea |
+| charles | 抓包软件 |
+| android-file-transfer | Android手机传输工具 |
+| nutstore | 坚果云 |
 
 下面这些不太适合自动安装, 有些比较大, 有些可以不装
 
@@ -221,9 +231,22 @@ apps=(
 
 | name | info |
 | --- | --- |
-| java | java |
-| robomango | mongodb客户端 |
+| vagrant-manager | vagrant-manager |
+| dash | dash |
+| genymotion | genymotion |
+| [macdown](http://macdown.uranusjr.com/) | Open source Markdown editor for OS X |
+| sourcetree | git client |
+| sequel-pro | mysql client |
 | Shadowsocks | Bypass firewall |
+| beyond-compare | beyond-compare 一个优秀的文件/目录对比工具 |
+| virtualbox | virtualbox 虚拟机 |
+| qq | qq |
+| 360yunpan | 360 云盘 |
+| airdroid | airdroid |
+| cs | cs |
+| leanote | leanote 笔记 |
+| jdk1.6 | android 编译 |
+
 
 ### OS X defaults setting
 
