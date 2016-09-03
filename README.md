@@ -35,7 +35,8 @@
 3. 安装Xcode Command Line Tools
 //输入gcc或者git，会提示
 ```
-xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. Choose an option in the dialog to download the command Line developer tools.
+xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. 
+Choose an option in the dialog to download the command Line developer tools.
 ```
 
 ```bash
@@ -68,7 +69,7 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对vim, ls, terminal进行美化, 主要是安装了solarized配色和powerline状态栏
 
-完成之后, 手动安装一些其他软件(Sublime3, Alfred, 以及一些较大的软件java, mysql, mongodb, nginx, jmeter,docker)
+完成之后, 手动安装一些其他软件(Shadowsocks, Alfred, 以及一些较大的软件java, mysql, mongodb, nginx, jmeter,docker)
 
 ## Restore backup
 
@@ -472,7 +473,6 @@ $ mackup restore
 | iterm2 | 默认配置 |
 | oh-my-zsh | ~/.oh-my-zsh |
 | scroll-reverser | 默认配置 |
-| slate | ~/.slate |
 | sublime-text-3 | plugins和config |
 | pycharm40 | config |
 | vim | ~/.vimrc 和~/.vim |
@@ -507,6 +507,27 @@ alias rm="trash" # 这个需要brew install trash
 | Macdown | Markdown编辑器 |
 | sourcetree | git客户端 |
 
+以及一些Chrome 扩展或者应用：
+
+| name | info |
+| --- | --- |
+| [SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN) |  |
+| [FireShot](https://chrome.google.com/webstore/detail/capture-webpage-screensho/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=zh-CN) |  |
+| [cVim](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) |  |
+| [Octotree](https://chrome.google.com/webstore/detail/cvim/ihlenndgcmojhcghmfjfneahoeklbjjh) |  |
+| [Web-Timer](https://chrome.google.com/webstore/detail/web-timer/ggnjbdfgigejghknieofeahaknkjafim) | |
+| [Markdown Editor](https://chrome.google.com/webstore/detail/markdown-editor/ekdcaddpmiodcipjfmffhhefijpdckaf) | |
+| [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj) |  |
+| [Tab Resize - split screen layouts](https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc) |  |
+| [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa) | |
+| [One-Click Extensions Manager](https://chrome.google.com/webstore/detail/%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E6%89%80%E6%9C%89%E6%89%A9%E5%B1%95/niemebbfnfbjfojajlmnbiikmcpjkkja) |  |
+| [20 Cubed]() | |
+| Apps | --- |
+| [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) | |
+| [Simple Docker UI](https://chrome.google.com/webstore/detail/simple-docker-ui/jfaelnolkgonnjdlkfokjadedkacbnib?hl=zh-CN) | |
+| [MySQL Admin](https://chrome.google.com/webstore/detail/chrome-mysql-admin/ndgnpnpakfcdjmpgmcaknimfgcldechn) | |
+| [WorkFlowy](https://chrome.google.com/webstore/detail/workflowy/koegeopamaoljbmhnfjbclbocehhgmkm/related?hl=zh-CN) | |
+
 还有一些压根装不上的
 
 | name | 说明 |
@@ -517,6 +538,8 @@ alias rm="trash" # 这个需要brew install trash
 | [font-roboto](http://www.google.com/fonts/specimen/Roboto) | Roboto字体 |
 
 ## 软件更新
+
+以后暂补
 
 ## Reference
 
