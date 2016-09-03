@@ -69,6 +69,8 @@ apps=(
   intellij-idea
   charles
   android-file-transfer
+  nutstore
+  
   # 
   # macdown # markdown编辑器
   # 手动安装：
