@@ -513,8 +513,8 @@ alias rm="trash" # 这个需要brew install trash
 | --- | --- |
 | [SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN) |  |
 | [FireShot](https://chrome.google.com/webstore/detail/capture-webpage-screensho/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=zh-CN) |  |
-| [cVim](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) |  |
-| [Octotree](https://chrome.google.com/webstore/detail/cvim/ihlenndgcmojhcghmfjfneahoeklbjjh) |  |
+| [cVim](https://chrome.google.com/webstore/detail/cvim/dbepggeogbaibhgnhhndojpepiihcmeb) |  |
+| [Octotree](https://chrome.google.com/webstore/detail/octotree/ihlenndgcmojhcghmfjfneahoeklbjjh) |  |
 | [Web-Timer](https://chrome.google.com/webstore/detail/web-timer/ggnjbdfgigejghknieofeahaknkjafim) | |
 | [Markdown Editor](https://chrome.google.com/webstore/detail/markdown-editor/ekdcaddpmiodcipjfmffhhefijpdckaf) | |
 | [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj) |  |
