@@ -26,7 +26,7 @@ binaries=(
   gdb
   homebrew/versions/gcc48
 
-  # docker
+  # docker 改为dockerformac
   # boot2docker
   # subversion
   # tomcat
@@ -70,7 +70,10 @@ apps=(
   charles
   android-file-transfer
   nutstore
-  
+  neteasemusic
+  githubpulse
+  sequel-pro
+
   # 
   # macdown # markdown编辑器
   # 手动安装：
@@ -89,6 +92,9 @@ apps=(
   # Postman
   # google keep
   # chromebook recovery
+  # reeder3
+  # 付费软件：
+  # SnippetsLab
   #####
   # jadx
 )
