@@ -72,8 +72,9 @@ apps=(
   nutstore
   neteasemusic
   githubpulse
-  sequel-pro
+  # sequel-pro 下载速度慢，需手动安装
 
+  #####
   # 
   # macdown # markdown编辑器
   # 手动安装：
@@ -88,12 +89,19 @@ apps=(
   # cs
   # leanote
   # jdk1.6
+  #
   # chrome App:
   # Postman
   # google keep
   # chromebook recovery
-  # reeder3
+  # docker client
+  # mysqladmin
+  # 
+  # Apple store:
+  # pocket
+  # 
   # 付费软件：
+  # reeder3
   # SnippetsLab
   #####
   # jadx

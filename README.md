@@ -543,9 +543,7 @@ alias rm="trash" # 这个需要brew install trash
 
 ## Reference
 
-- [Hacker's Guide to Setting up Your Mac](http://lapwinglabs.com/blog/hacker-guide-to-setting-up-your-mac)
 - [First steps with Mac OS X as a Developer](http://carlosbecker.com/posts/first-steps-with-mac-os-x-as-a-developer/)
-- [Mac 开发配置手册](https://www.gitbook.com/book/aaaaaashu/mac-dev-setup/details)
 - [如何優雅地在 Mac 上使用 dotfiles?](http://segmentfault.com/a/1190000002713879)
 - [osx-for-hackers.sh](https://gist.github.com/brandonb927/3195465)
 - [Mackup](https://github.com/lra/mackup/tree/master/doc)
