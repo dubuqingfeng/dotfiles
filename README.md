@@ -9,7 +9,7 @@
 
 更多的 dotfiles 请参考 [GitHub does dotfiles](https://dotfiles.github.io/)。
 
-## Agenda
+# Agenda
 
 - [快速开始](#quick-start)
   - [清除并安装 OS X](#erase-and-reinstall-os-x)
@@ -18,9 +18,24 @@
   - [恢复备份](#restore-backup)
 - [How To Use](#how-to-use)
   - [dotfiles](#dotfiles)
+    - [Topical](#topical)
+    - [Components](#components)
   - [OS X](#os-x)
+    - [Homebrew packages](#homebrewpackages)
+      - [Binaries](#binaries)
+      - [Fonts](#fonts)
+      - [Apps](#apps)
+    - [OS X defaults setting](#osxdefaultssetting)
+  - [Beautify](#beautify)
+    - [Terminal/Iterm2](#iterm2)
+    - [vim](#vim)
+    - [ls](#ls)
+    - [powerline](#powerline)
   - [Mackup](#mackup)
+  - [alias](#alias)
 - [Issue](#issue)
+- [软件更新](#softupdate)
+- [Reference](#reference)
 
 # Quick Start
 
@@ -69,7 +84,7 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对vim, ls, terminal进行美化, 主要是安装了solarized配色和powerline状态栏
 
-完成之后, 手动安装一些其他软件(Shadowsocks, Alfred, 以及一些较大的软件java, mysql, mongodb, nginx, jmeter,docker)
+完成之后, 手动安装一些其他软件(ShadowsocksX,sequel-pro,sourcetree, 以及一些较大的软件java，docker)
 
 ## Restore backup
 
@@ -493,7 +508,7 @@ alias ve="pyenv local"
 alias rm="trash" # 这个需要brew install trash
 ```
 
-## Issue
+# Issue
 
 有一些程序使用的破解版本, 需要手动安装
 以及有一些brew cask安装不上的app
@@ -521,7 +536,6 @@ alias rm="trash" # 这个需要brew install trash
 | [Tab Resize - split screen layouts](https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc) |  |
 | [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa) | |
 | [One-Click Extensions Manager](https://chrome.google.com/webstore/detail/%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E6%89%80%E6%9C%89%E6%89%A9%E5%B1%95/niemebbfnfbjfojajlmnbiikmcpjkkja) |  |
-| [20 Cubed]() | |
 | Apps | --- |
 | [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) | |
 | [Simple Docker UI](https://chrome.google.com/webstore/detail/simple-docker-ui/jfaelnolkgonnjdlkfokjadedkacbnib?hl=zh-CN) | |
@@ -537,11 +551,11 @@ alias rm="trash" # 这个需要brew install trash
 | [qlstephen](http://whomwah.github.io/qlstephen/) | 让 Quick Look 支持无后拓展名的纯文本 |
 | [font-roboto](http://www.google.com/fonts/specimen/Roboto) | Roboto字体 |
 
-## 软件更新
+# 软件更新
 
 以后暂补
 
-## Reference
+# Reference
 
 - [First steps with Mac OS X as a Developer](http://carlosbecker.com/posts/first-steps-with-mac-os-x-as-a-developer/)
 - [如何優雅地在 Mac 上使用 dotfiles?](http://segmentfault.com/a/1190000002713879)
