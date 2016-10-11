@@ -72,6 +72,7 @@ apps=(
   nutstore
   neteasemusic
   githubpulse
+  alfred
   # sequel-pro 下载速度慢，需手动安装
 
   #####
@@ -124,9 +125,10 @@ brew install findutils
 # Install Bash 4
 brew install bash
 # Install Homebrew Cask
+brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
-brew install caskroom/cask/brew-cask
+#brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
 echo "Installing binaries..."
