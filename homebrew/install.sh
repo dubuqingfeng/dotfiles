@@ -28,6 +28,10 @@ binaries=(
   node
   ant
 
+  # composer
+  composer
+
+  # phpbrew
   automake
   autoconf
   curl
@@ -145,6 +149,7 @@ brew install bash
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
+brew tap homebrew/versions
 #brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
