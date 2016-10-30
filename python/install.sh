@@ -12,7 +12,7 @@ plugins=(
     web.py
     requests
     #a statusline plugin for vim, and provides statuslines and prompts for several other applications
-    #powerline-status
+    powerline-status
     #automatically formats Python code to conform to the PEP 8
     autopep8
     #PyFlakes\pep8\Ned Batchelder’s McCabe script

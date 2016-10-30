@@ -25,6 +25,23 @@ binaries=(
   netcat
   gdb
   homebrew/versions/gcc48
+  node
+  ant
+
+  automake
+  autoconf
+  curl
+  pcre
+  bison
+  mhash
+  libtool
+  icu4c
+  jpeg
+  openssl
+  libxml2
+  mcrypt
+  gmp
+  libevent
 
   # docker 改为dockerformac
   # boot2docker
@@ -130,6 +147,11 @@ brew tap caskroom/fonts
 brew tap caskroom/versions
 #brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
+
+#安装phpbrew
+brew link icu4c
+brew link --force openssl
+brew link --force libxml2
 
 echo "Installing binaries..."
 brew install ${binaries[@]}
