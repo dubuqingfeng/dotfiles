@@ -27,9 +27,10 @@ binaries=(
   homebrew/versions/gcc48
   node
   ant
+  nmap
 
   # composer
-  composer
+  # composer
 
   # phpbrew
   automake
@@ -94,6 +95,7 @@ apps=(
   neteasemusic
   githubpulse
   alfred
+  macpass
   # sequel-pro 下载速度慢，需手动安装
 
   #####
@@ -118,7 +120,9 @@ apps=(
   # chromebook recovery
   # docker client
   # mysqladmin
-  # 
+  #
+  # Keepass:
+  # Xquartz 
   # Apple store:
   # pocket
   # 
