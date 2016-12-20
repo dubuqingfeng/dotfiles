@@ -28,6 +28,7 @@ binaries=(
   node
   ant
   nmap
+  go
 
   # composer
   # composer
@@ -96,7 +97,7 @@ apps=(
   githubpulse
   alfred
   macpass
-  # sequel-pro 下载速度慢，需手动安装
+  sequel-pro  #下载速度慢，需手动安装
 
   #####
   # 
