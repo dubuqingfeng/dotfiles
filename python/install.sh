@@ -9,8 +9,13 @@
 
 plugins=(
     virtualenv
-    web.py
+    utils
+    dbgp
+    pep8
+    pyflakes
+    isort
     requests
+    db
     #a statusline plugin for vim, and provides statuslines and prompts for several other applications
     powerline-status
     #automatically formats Python code to conform to the PEP 8

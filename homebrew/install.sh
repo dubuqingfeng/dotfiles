@@ -29,7 +29,8 @@ binaries=(
   ant
   nmap
   go
-
+  mosquitto
+  
   # composer
   # composer
 
