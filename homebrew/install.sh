@@ -50,6 +50,9 @@ binaries=(
   gmp
   libevent
 
+  # ocr
+  tesseract
+  maven
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -99,6 +102,7 @@ apps=(
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
+  sizeup
 
   #####
   # 

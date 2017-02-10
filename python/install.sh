@@ -39,6 +39,7 @@ plugins=(
     beautifulsoup4
     scrapy
     Pillow
+    pytesseract
 )
 
 pip install --upgrade pip
