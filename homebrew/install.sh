@@ -26,15 +26,13 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
-  ant
   nmap
   go
-  mosquitto
   imagemagick
   # 通过phpbrew进行composer配置
   # composer
 
-  # phpbrew
+  phpbrew
   automake
   autoconf
   curl
@@ -53,10 +51,6 @@ binaries=(
   zlib
 
   php55-redis
-  # ocr
-  tesseract
-  maven
-  graphviz
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -78,12 +72,10 @@ apps=(
   google-chrome
   iterm2 # 加强版终端
   firefox
-  scroll-reverser  # 可以分别鼠标和触控板滚动方向
-  the-unarchiver  # 免费的解压软件
-  android-studio # 较大
   robomongo # mongodb client
   pycharm-ce
-  evernote
+  the-unarchiver
+  #evernote
   sublime-text3
   filezilla
   vagrant
@@ -93,22 +85,15 @@ apps=(
   # dash
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
-  mactex
-  intel-haxm
-  # genymotion
-  wireshark --with-qt
+  # intel-haxm
   intellij-idea
   charles
   android-file-transfer
   nutstore
-  neteasemusic
-  githubpulse
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
   squirrel
-  sizeup
-  resilio-sync
   #####
   # 
   # macdown # markdown编辑器
@@ -119,7 +104,6 @@ apps=(
   # beyond-compare # 对比软件
   # virtualbox
   # qq
-  # 360yunpan
   # airdroid
   # cs
   # leanote

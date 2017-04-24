@@ -29,17 +29,9 @@ plugins=(
     #backport of the new features
     unittest2
     markdown
-    pelican
     six
-    tornado
-    tornado-mysql
-    tornado-redis
-    pymongo
-    jinja2
-    beautifulsoup4
     scrapy
     Pillow
-    pytesseract
 )
 
 pip install --upgrade pip
