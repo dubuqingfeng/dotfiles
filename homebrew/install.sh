@@ -94,6 +94,8 @@ apps=(
   macpass
   sequel-pro  #下载速度慢，需手动安装
   squirrel
+  docker
+  kitematic
   #####
   # 
   # macdown # markdown编辑器
