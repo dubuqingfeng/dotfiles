@@ -108,7 +108,9 @@ apps=(
   sequel-pro  #下载速度慢，需手动安装
   squirrel
   sizeup
-  resilio-sync
+  resilio-sync 
+  docker
+  kitematic
   #####
   # 
   # macdown # markdown编辑器
