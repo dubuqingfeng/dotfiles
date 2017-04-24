@@ -30,8 +30,8 @@ binaries=(
   nmap
   go
   mosquitto
-  
-  # composer
+  imagemagick
+  # 通过phpbrew进行composer配置
   # composer
 
   # phpbrew
@@ -49,10 +49,14 @@ binaries=(
   mcrypt
   gmp
   libevent
+  
+  zlib
 
+  php55-redis
   # ocr
   tesseract
   maven
+  graphviz
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -102,8 +106,9 @@ apps=(
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
+  squirrel
   sizeup
-
+  resilio-sync
   #####
   # 
   # macdown # markdown编辑器
@@ -177,7 +182,7 @@ brew cask install ${fonts[@]}
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps..."
-sudo brew cask install --appdir="/Applications" ${apps[@]}
+brew cask install --appdir="/Applications" ${apps[@]}
 
 # clean things up
 brew cleanup
