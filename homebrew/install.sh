@@ -51,6 +51,21 @@ binaries=(
   zlib
 
   php55-redis
+  
+  #编译bitcoin
+  brew Installing
+  #automake 
+  berkeley-db4 
+  #libtool 
+  boost --c++11 
+  miniupnpc 
+  #openssl 
+  pkg-config 
+  protobuf --c++11 
+  qt5 
+  #libevent
+  librsvg
+
   # docker 改为dockerformac
   # boot2docker
   # subversion
