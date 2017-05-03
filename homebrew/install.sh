@@ -93,7 +93,7 @@ apps=(
   pycharm-ce
   the-unarchiver
   #evernote
-  sublime-text3
+  sublime-text
   filezilla
   vagrant
   # vagrant-manager
