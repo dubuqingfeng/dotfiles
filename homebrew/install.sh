@@ -26,6 +26,8 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
+  # 数据库
+  mysql
   nmap
   go
   imagemagick
@@ -91,7 +93,7 @@ apps=(
   pycharm-ce
   the-unarchiver
   #evernote
-  sublime-text3
+  sublime-text
   filezilla
   vagrant
   # vagrant-manager
