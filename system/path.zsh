@@ -1,2 +1,2 @@
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${HOME}/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Tex/Root/bin/x86_64-darwiin:$GOPATH/bin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${HOME}/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Tex/Root/bin/x86_64-darwiin:$GOPATH/bin:/usr/local/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
