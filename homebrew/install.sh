@@ -32,7 +32,6 @@ binaries=(
   nmap
   go
   imagemagick
-  heroku
   # 通过phpbrew进行composer配置
   # composer
 
@@ -99,8 +98,6 @@ apps=(
   sublime-text
   filezilla
   ngrok
-  # vagrant
-  # vagrant-manager
   xmind
   licecap # 录屏gif软件
   # dash
