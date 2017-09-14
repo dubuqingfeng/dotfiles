@@ -114,9 +114,11 @@ apps=(
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
-  squirrel
   docker
   kitematic
+  sizeup
+
+  ## work
   bearychat
   slack
   #####
