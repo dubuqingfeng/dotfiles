@@ -16,6 +16,8 @@ plugins=(
     isort
     requests
     db
+    # 一些机器人
+    qqbot
     #a statusline plugin for vim, and provides statuslines and prompts for several other applications
     powerline-status
     #automatically formats Python code to conform to the PEP 8

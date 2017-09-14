@@ -14,6 +14,7 @@ binaries=(
   grc
   git-flow
   tree
+  gpg
   mackup
   z
   tmux
@@ -26,9 +27,12 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
+  # 数据库
+  mysql
   nmap
   go
   imagemagick
+  heroku
   # 通过phpbrew进行composer配置
   # composer
 
@@ -50,7 +54,23 @@ binaries=(
   
   zlib
 
-  php55-redis
+  #php55-redis
+  
+  #编译bitcoin
+# brew Installing
+  #automake 
+  berkeley-db4 
+  #libtool 
+  boost --c++11 
+  miniupnpc 
+  #openssl 
+  pkg-config 
+  protobuf --c++11 
+  qt5 
+  #libevent
+  librsvg
+
+  homebrew/php/php71
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -75,10 +95,11 @@ apps=(
   robomongo # mongodb client
   pycharm-ce
   the-unarchiver
-  #evernote
-  sublime-text3
+  evernote
+  sublime-text
   filezilla
-  vagrant
+  ngrok
+  # vagrant
   # vagrant-manager
   xmind
   licecap # 录屏gif软件
@@ -93,9 +114,13 @@ apps=(
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
-  sizeup
   docker
   kitematic
+  sizeup
+
+  ## work
+  bearychat
+  slack
   #####
   # 
   # macdown # markdown编辑器
@@ -104,7 +129,7 @@ apps=(
   # sequel-pro # mysql client
   # shadowsocksx # shadowsocks
   # beyond-compare # 对比软件
-  # virtualbox
+  virtualbox
   # qq
   # airdroid
   # cs
@@ -151,7 +176,7 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 brew tap homebrew/versions
-#brew install caskroom/cask/brew-cask
+brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
 #安装phpbrew
