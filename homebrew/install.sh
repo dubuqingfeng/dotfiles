@@ -14,6 +14,7 @@ binaries=(
   grc
   git-flow
   tree
+  gpg
   mackup
   z
   tmux
@@ -31,6 +32,7 @@ binaries=(
   nmap
   go
   imagemagick
+  heroku
   # 通过phpbrew进行composer配置
   # composer
 
@@ -52,10 +54,10 @@ binaries=(
   
   zlib
 
-  php55-redis
+  #php55-redis
   
   #编译bitcoin
-  brew Installing
+# brew Installing
   #automake 
   berkeley-db4 
   #libtool 
@@ -92,10 +94,11 @@ apps=(
   robomongo # mongodb client
   pycharm-ce
   the-unarchiver
-  #evernote
+  evernote
   sublime-text
   filezilla
-  vagrant
+  ngrok
+  # vagrant
   # vagrant-manager
   xmind
   licecap # 录屏gif软件
@@ -113,6 +116,7 @@ apps=(
   squirrel
   docker
   kitematic
+  bearychat
   #####
   # 
   # macdown # markdown编辑器
@@ -121,7 +125,7 @@ apps=(
   # sequel-pro # mysql client
   # shadowsocksx # shadowsocks
   # beyond-compare # 对比软件
-  # virtualbox
+  virtualbox
   # qq
   # airdroid
   # cs
