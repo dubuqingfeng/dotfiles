@@ -70,6 +70,7 @@ binaries=(
   #libevent
   librsvg
 
+  homebrew/php/php71
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -117,6 +118,7 @@ apps=(
   docker
   kitematic
   bearychat
+  slack
   #####
   # 
   # macdown # markdown编辑器
