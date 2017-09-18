@@ -113,7 +113,7 @@ apps=(
   sequel-pro  #下载速度慢，需手动安装
   docker
   kitematic
-  sizeup
+  minikube
 
   ## work
   bearychat
