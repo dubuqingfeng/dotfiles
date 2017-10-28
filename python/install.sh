@@ -31,6 +31,7 @@ plugins=(
     markdown
     six
     scrapy
+    shub
     Pillow
 )
 
