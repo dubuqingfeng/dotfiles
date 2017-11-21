@@ -27,6 +27,7 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
+  httpie
   # 数据库
   mysql
   nmap
@@ -108,7 +109,7 @@ apps=(
   grandperspective # 磁盘空间分析软件
   # intel-haxm
   intellij-idea
-#  phpstorm
+  # phpstorm
   typora
   charles
   android-file-transfer
@@ -121,10 +122,12 @@ apps=(
   kitematic
   minikube
   1password
-  steam
+  postman
   ## work
   bearychat
   slack
+  qqmusic
+  gas-mask
   #####
   # 
   # macdown # markdown编辑器
@@ -141,7 +144,6 @@ apps=(
   # jdk1.6
   #
   # chrome App:
-  # Postman
   # google keep
   # chromebook recovery
   # docker client
