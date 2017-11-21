@@ -27,11 +27,13 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
+  httpie
   # 数据库
   mysql
   nmap
   go
   imagemagick
+  geckodriver
   # 通过phpbrew进行composer配置
   # composer
 
@@ -52,7 +54,7 @@ binaries=(
   libevent
   
   zlib
-
+  homebrew/nginx/openresty
   #php55-redis
   
   #编译bitcoin
@@ -70,6 +72,7 @@ binaries=(
   librsvg
 
   homebrew/php/php71
+  kompose
   # docker 改为dockerformac
   # boot2docker
   # subversion
@@ -91,7 +94,8 @@ apps=(
   google-chrome
   iterm2 # 加强版终端
   firefox
-  robomongo # mongodb client
+  robo-3t
+  # robomongo # mongodb client
   pycharm-ce
   the-unarchiver
   evernote
@@ -105,19 +109,25 @@ apps=(
   grandperspective # 磁盘空间分析软件
   # intel-haxm
   intellij-idea
+  # phpstorm
+  typora
   charles
   android-file-transfer
   nutstore
   alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
+  rdm
   docker
   kitematic
-  sizeup
-
+  minikube
+  1password
+  postman
   ## work
   bearychat
   slack
+  qqmusic
+  gas-mask
   #####
   # 
   # macdown # markdown编辑器
@@ -134,7 +144,6 @@ apps=(
   # jdk1.6
   #
   # chrome App:
-  # Postman
   # google keep
   # chromebook recovery
   # docker client
