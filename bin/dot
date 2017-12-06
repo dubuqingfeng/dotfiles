@@ -14,5 +14,8 @@ sh $HOME/.dotfiles/osx/set-defaults.sh
 # Set up python env
 sh $HOME/.dotfiles/python/install.sh
 
+# Install global npm
+sh $HOME/.dotfiles/node/install.sh
+
 # beautify vim ls terminal
 sh $HOME/.dotfiles/beautify/install.sh
