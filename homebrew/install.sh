@@ -27,6 +27,7 @@ binaries=(
   gdb
   homebrew/versions/gcc48
   node
+  nvm
   httpie
   # 数据库
   mysql
@@ -36,7 +37,7 @@ binaries=(
   geckodriver
   # 通过phpbrew进行composer配置
   # composer
-
+  wrk
   phpbrew
   automake
   autoconf
@@ -70,7 +71,7 @@ binaries=(
   qt5 
   #libevent
   librsvg
-
+  tldr
   homebrew/php/php71
   kompose
   # docker 改为dockerformac
@@ -107,14 +108,14 @@ apps=(
   # dash
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
-  # intel-haxm
   intellij-idea
   # phpstorm
+  visual-studio-code
   typora
   charles
   android-file-transfer
   nutstore
-  alfred
+  # alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
   rdm
@@ -127,7 +128,7 @@ apps=(
   bearychat
   slack
   qqmusic
-  gas-mask
+  bartender
   #####
   # 
   # macdown # markdown编辑器
@@ -186,7 +187,6 @@ brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
 #安装phpbrew
-brew link icu4c
 brew link --force openssl
 brew link --force libxml2
 

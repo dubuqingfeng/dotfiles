@@ -45,7 +45,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow brew)
+plugins=(zsh-autosuggestions)
 #plugins=(autojump)
 # User configuration
 
@@ -126,6 +126,4 @@ if [ -d "$DOTFILES" ];
   unset config_files
 fi
 
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
