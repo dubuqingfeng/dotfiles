@@ -1,7 +1,7 @@
 # !/bin/sh
 
 plugins=(
-	istanbul,
+	istanbul
 	autocannon
 )
 

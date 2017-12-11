@@ -12,6 +12,7 @@ binaries=(
   python
   ctags
   grc
+  ccat
   git-flow
   tree
   gpg
@@ -128,7 +129,6 @@ apps=(
   bearychat
   slack
   qqmusic
-  bartender
   #####
   # 
   # macdown # markdown编辑器
