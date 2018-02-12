@@ -1,4 +1,5 @@
 #!/bin/bash
 function docker-clean-image {
     docker images  -f "dangling=true" -q | xargs docker rmi
+    # docker system prune
 }

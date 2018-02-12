@@ -26,7 +26,7 @@ binaries=(
   gettext
   netcat
   gdb
-  homebrew/versions/gcc48
+  gcc
   node
   nvm
   httpie
@@ -35,7 +35,6 @@ binaries=(
   nmap
   go
   imagemagick
-  geckodriver
   # 通过phpbrew进行composer配置
   # composer
   wrk
@@ -76,7 +75,6 @@ binaries=(
   homebrew/php/php71
   kompose
   # docker 改为dockerformac
-  # boot2docker
   # subversion
   # tomcat
   # mysql
@@ -97,12 +95,12 @@ apps=(
   iterm2 # 加强版终端
   firefox
   robo-3t
-  # robomongo # mongodb client
   pycharm-ce
   the-unarchiver
   evernote
   sublime-text
   filezilla
+  pomotodo
   ngrok
   xmind
   licecap # 录屏gif软件
@@ -116,7 +114,6 @@ apps=(
   charles
   android-file-transfer
   nutstore
-  # alfred
   macpass
   sequel-pro  #下载速度慢，需手动安装
   rdm
@@ -128,27 +125,22 @@ apps=(
   ## work
   bearychat
   slack
-  qqmusic
+  neteasemusic
   #####
   # 
   # macdown # markdown编辑器
   # 手动安装：
   # sourcetree # git
-  # sequel-pro # mysql client
   # shadowsocksx # shadowsocks
+  # shadowsocksx-ng
   # beyond-compare # 对比软件
   virtualbox
   # qq
   # airdroid
-  # cs
   # leanote
-  # jdk1.6
   #
   # chrome App:
-  # google keep
   # chromebook recovery
-  # docker client
-  # mysqladmin
   #
   # Keepass:
   # Xquartz 
@@ -157,7 +149,7 @@ apps=(
   # 
   # 付费软件：
   # reeder3
-  # SnippetsLab
+  # alfred
   #####
   # jadx
 )
@@ -170,7 +162,7 @@ fonts=(
 
 echo "Update Homebrew..."
 # Update homebrew recipes
-# brew update
+brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
@@ -182,9 +174,6 @@ brew install bash
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
-brew tap homebrew/versions
-brew install caskroom/cask/brew-cask
-brew upgrade brew-cask
 
 #安装phpbrew
 brew link --force openssl
