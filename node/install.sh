@@ -3,6 +3,8 @@
 plugins=(
 	istanbul
 	autocannon
+	# hexo
+	hexo-cli
 )
 
 if test ! $(which plugins[@])
