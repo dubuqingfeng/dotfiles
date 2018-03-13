@@ -56,7 +56,6 @@ binaries=(
   
   zlib
   homebrew/nginx/openresty
-  #php55-redis
   
   #编译bitcoin
 # brew Installing
@@ -73,7 +72,11 @@ binaries=(
   librsvg
   tldr
   homebrew/php/php71
+  php71-swoole
+  php71-redis
+  hiredis
   kompose
+  jenkins
   # docker 改为dockerformac
   # subversion
   # tomcat
@@ -81,10 +84,8 @@ binaries=(
   # nginx
   # mongodb
 
-  # grc
   # hub
   # legit
-  # nvm
   # ssh-copy-id
 )
 
@@ -99,7 +100,6 @@ apps=(
   the-unarchiver
   evernote
   sublime-text
-  filezilla
   pomotodo
   ngrok
   xmind
@@ -135,10 +135,10 @@ apps=(
   # shadowsocksx-ng
   # beyond-compare # 对比软件
   virtualbox
+  # resilio-sync
   # qq
   # airdroid
   # leanote
-  #
   # chrome App:
   # chromebook recovery
   #

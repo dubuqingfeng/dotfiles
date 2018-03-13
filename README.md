@@ -444,7 +444,9 @@ alias rm="trash" # 这个需要brew install trash
 
 # 软件更新
 
-以后暂补
+```
+brew cask restall xxx
+```
 
 # Reference
 
