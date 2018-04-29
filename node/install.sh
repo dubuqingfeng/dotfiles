@@ -5,6 +5,8 @@ plugins=(
 	autocannon
 	# hexo
 	hexo-cli
+	# docsify-cli
+	docsify-cli
 )
 
 if test ! $(which plugins[@])

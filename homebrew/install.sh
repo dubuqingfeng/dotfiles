@@ -35,10 +35,8 @@ binaries=(
   nmap
   go
   imagemagick
-  # 通过phpbrew进行composer配置
   # composer
   wrk
-  phpbrew
   automake
   autoconf
   curl
@@ -71,9 +69,9 @@ binaries=(
   #libevent
   librsvg
   tldr
-  homebrew/php/php71
-  php71-swoole
-  php71-redis
+  homebrew/core/php
+  # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
+  # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
   kompose
   jenkins
@@ -101,6 +99,7 @@ apps=(
   evernote
   sublime-text
   pomotodo
+  foxitreader
   ngrok
   xmind
   licecap # 录屏gif软件
@@ -122,10 +121,13 @@ apps=(
   minikube
   1password
   postman
+  mindnode-pro
+  gpg-suite
   ## work
   bearychat
   slack
   neteasemusic
+  virtualbox
   #####
   # 
   # macdown # markdown编辑器
@@ -134,16 +136,11 @@ apps=(
   # shadowsocksx # shadowsocks
   # shadowsocksx-ng
   # beyond-compare # 对比软件
-  virtualbox
   # resilio-sync
   # qq
-  # airdroid
-  # leanote
   # chrome App:
   # chromebook recovery
   #
-  # Keepass:
-  # Xquartz 
   # Apple store:
   # pocket
   # 
