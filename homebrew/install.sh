@@ -53,7 +53,8 @@ binaries=(
   libevent
   
   zlib
-  homebrew/nginx/openresty
+  # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
+  # homebrew/nginx/openresty
   
   #编译bitcoin
 # brew Installing
@@ -98,8 +99,6 @@ apps=(
   the-unarchiver
   evernote
   sublime-text
-  pomotodo
-  foxitreader
   ngrok
   xmind
   licecap # 录屏gif软件
@@ -121,22 +120,20 @@ apps=(
   minikube
   1password
   postman
-  mindnode-pro
   gpg-suite
   ## work
   bearychat
   slack
+  pomotodo
   neteasemusic
   virtualbox
   #####
   # 
-  # macdown # markdown编辑器
   # 手动安装：
   # sourcetree # git
   # shadowsocksx # shadowsocks
   # shadowsocksx-ng
   # beyond-compare # 对比软件
-  # resilio-sync
   # qq
   # chrome App:
   # chromebook recovery
