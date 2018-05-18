@@ -15,6 +15,8 @@ plugins=(
     pyflakes
     isort
     requests
+    # Generate markdown API document from Postman.
+    postdown
     db
     #a statusline plugin for vim, and provides statuslines and prompts for several other applications
     powerline-status
@@ -28,11 +30,15 @@ plugins=(
     pytz
     #backport of the new features
     unittest2
+    # pelican
+    pelican
     markdown
     six
     scrapy
     shub
     Pillow
+    # database
+    PyMySQL
 )
 
 pip install --upgrade pip

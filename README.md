@@ -5,7 +5,7 @@
 
 ![iMac-MacBook-flat](http://i.imgur.com/GBpjrHB.png)
 
-这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles-mac) 是基于zoumo的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
+这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles-mac) 是基于 zoumo 的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
 
 更多的 dotfiles 请参考 [GitHub does dotfiles](https://dotfiles.github.io/)。
 
@@ -43,7 +43,7 @@
 1. 更新APP store
 2. 安装Xcode
 3. 安装Xcode Command Line Tools
-//输入gcc或者git，会提示
+// 输入gcc或者git，会提示
 ```
 xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. 
 Choose an option in the dialog to download the command Line developer tools.
@@ -205,7 +205,7 @@ apps=(
 | --- | --- |
 | java | java |
 | [google-chrome](www.google.com/chrome) | Google 浏览器 |
-| iterm2 | iterm2加强版终端 |
+| [iterm2](https://www.iterm2.com/) | iterm2加强版终端 |
 | Firefox | 火狐浏览器 |
 | [scroll-reverser](http://pilotmoon.com/scrollreverser/) | 支持鼠标和触控板滚轮分别设置 |
 | the-unarchiver | 优秀免费的解压软件 |
@@ -214,8 +214,6 @@ apps=(
 | pycharm-ce | 社区版pycharm |
 | evernote | 印象笔记 |
 | sublime-text3 | 一种编辑器 |
-| filezilla | ftp client |
-| vagrant | vagrant |
 | xmind | 一种思维导图软件 |
 | licecap | 一种录屏软件 |
 | appcleaner | app卸载软件 |
@@ -242,20 +240,13 @@ apps=(
 
 | name | info |
 | --- | --- |
-| vagrant-manager | vagrant-manager |
 | dash | dash |
-| genymotion | genymotion |
-| [macdown](http://macdown.uranusjr.com/) | Open source Markdown editor for OS X |
-| sourcetree | git client |
-| sequel-pro | mysql client |
+| [sourcetree](https://www.sourcetreeapp.com/) | git client |
+| [sequel-pro](https://www.sequelpro.com/) | mysql client |
 | Shadowsocks | Bypass firewall |
 | beyond-compare | beyond-compare 一个优秀的文件/目录对比工具 |
 | virtualbox | virtualbox 虚拟机 |
 | qq | qq |
-| 360yunpan | 360 云盘 |
-| airdroid | airdroid |
-| cs | cs |
-| leanote | leanote 笔记 |
 | jdk1.6 | android 编译 |
 
 
@@ -313,7 +304,7 @@ apps=(
 
 //	Finder默认位置设置为个人
 
-##Mackup
+## Mackup
 
 当初始环境都安装好了以后, 就是需要备份了。除了 `.zsrc`、`.vimrc` 这类 dotfile 比较适合放置Github上面之外，其他像是 Sublime 的 plugin、iTerm2 的 setting、Oh My Zsh 的 plugin、等等很多一般程序的配置需要备份, 这些不适合放在Github上面。所以这里介紹 [Mackup](https://github.com/lra/mackup) 
 
@@ -383,7 +374,6 @@ $ mackup restore
 | pycharm40 | config |
 | vim | ~/.vimrc 和~/.vim |
 
-
 更多详细的配置说明和支持软件请查看 [mackup 的文件](https://github.com/lra/mackup/tree/master/doc)。
 
 ## alias
@@ -410,7 +400,6 @@ alias rm="trash" # 这个需要brew install trash
 | postman | chrome-extendsion |
 | sequel-pro | mysql client |
 | Shadowsocks | --- |
-| Macdown | Markdown编辑器 |
 | sourcetree | git客户端 |
 
 以及一些Chrome 扩展或者应用：
@@ -421,8 +410,6 @@ alias rm="trash" # 这个需要brew install trash
 | [FireShot](https://chrome.google.com/webstore/detail/capture-webpage-screensho/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=zh-CN) |  |
 | [cVim](https://chrome.google.com/webstore/detail/cvim/dbepggeogbaibhgnhhndojpepiihcmeb) |  |
 | [Octotree](https://chrome.google.com/webstore/detail/octotree/ihlenndgcmojhcghmfjfneahoeklbjjh) |  |
-| [Web-Timer](https://chrome.google.com/webstore/detail/web-timer/ggnjbdfgigejghknieofeahaknkjafim) | |
-| [Markdown Editor](https://chrome.google.com/webstore/detail/markdown-editor/ekdcaddpmiodcipjfmffhhefijpdckaf) | |
 | [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj) |  |
 | [Tab Resize - split screen layouts](https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc) |  |
 | [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa) | |
@@ -445,6 +432,7 @@ alias rm="trash" # 这个需要brew install trash
 # 软件更新
 
 ```
+brew upgrade xxx
 brew cask restall xxx
 ```
 

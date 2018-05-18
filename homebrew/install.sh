@@ -35,10 +35,8 @@ binaries=(
   nmap
   go
   imagemagick
-  # 通过phpbrew进行composer配置
   # composer
   wrk
-  phpbrew
   automake
   autoconf
   curl
@@ -55,7 +53,8 @@ binaries=(
   libevent
   
   zlib
-  homebrew/nginx/openresty
+  # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
+  # homebrew/nginx/openresty
   
   #编译bitcoin
 # brew Installing
@@ -71,9 +70,9 @@ binaries=(
   #libevent
   librsvg
   tldr
-  homebrew/php/php71
-  php71-swoole
-  php71-redis
+  homebrew/core/php
+  # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
+  # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
   kompose
   jenkins
@@ -100,7 +99,6 @@ apps=(
   the-unarchiver
   evernote
   sublime-text
-  pomotodo
   ngrok
   xmind
   licecap # 录屏gif软件
@@ -122,28 +120,24 @@ apps=(
   minikube
   1password
   postman
+  gpg-suite
   ## work
   bearychat
   slack
+  pomotodo
   neteasemusic
+  virtualbox
   #####
   # 
-  # macdown # markdown编辑器
   # 手动安装：
   # sourcetree # git
   # shadowsocksx # shadowsocks
   # shadowsocksx-ng
   # beyond-compare # 对比软件
-  virtualbox
-  # resilio-sync
   # qq
-  # airdroid
-  # leanote
   # chrome App:
   # chromebook recovery
   #
-  # Keepass:
-  # Xquartz 
   # Apple store:
   # pocket
   # 
