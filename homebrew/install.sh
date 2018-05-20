@@ -27,9 +27,11 @@ binaries=(
   netcat
   gdb
   gcc
-  node
+  # Node
+  node@8
   nvm
   httpie
+  textql
   # 数据库
   mysql
   nmap
@@ -121,6 +123,7 @@ apps=(
   1password
   postman
   gpg-suite
+  dropbox  # mackup 等同步
   ## work
   bearychat
   slack
