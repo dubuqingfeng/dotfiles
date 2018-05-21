@@ -97,9 +97,6 @@ $ mackup restore
 
 | topic  | *.symlink          | .dotfiles     |
 | ------ | ------------------ | ------------- |
-| git    | gitconfig.symlink  | ~/.gitconfig  |
-|     | gitignore.symlink  | ~/.gitignore  |
-| mackup | mackup.cfg.symlink | ~/.mackup.cfg |
 | vim    | vimrc.symlink      | ~/.vimrc      |
 | zsh    | zshrc.symlink      | ~/.zshrc      |
 

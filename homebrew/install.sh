@@ -123,7 +123,6 @@ apps=(
   1password
   postman
   gpg-suite
-  dropbox  # mackup 等同步
   ## work
   bearychat
   slack

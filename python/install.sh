@@ -46,6 +46,4 @@ pip install --upgrade pip
 # pyenv
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
-# pyenv install 3.5.0
-
 pip install ${plugins[@]}
