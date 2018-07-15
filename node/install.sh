@@ -7,6 +7,10 @@ plugins=(
 	hexo-cli
 	# docsify-cli
 	docsify-cli
+	# yo generator
+	generator-generator
+	# leetcode
+	leetcode-cli
 )
 
 if test ! $(which plugins[@])

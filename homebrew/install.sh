@@ -7,9 +7,14 @@
 
 # Binaries
 binaries=(
+  # language
+  python
+  python@2
+  go
+  homebrew/core/php
+
   dos2unix
   wget
-  python
   ctags
   grc
   ccat
@@ -27,15 +32,17 @@ binaries=(
   netcat
   gdb
   gcc
+  # security
+  sqlmap
   # Node
   node@8
   nvm
   httpie
   textql
+  kafka
   # 数据库
   mysql
   nmap
-  go
   imagemagick
   # composer
   wrk
@@ -72,15 +79,11 @@ binaries=(
   #libevent
   librsvg
   tldr
-  homebrew/core/php
   # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
   # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
   kompose
   jenkins
-  # docker 改为dockerformac
-  # subversion
-  # tomcat
   # mysql
   # nginx
   # mongodb
@@ -92,12 +95,17 @@ binaries=(
 
 # Apps
 apps=(
+  # language
   java
+  racket
+  # browsers
   google-chrome
-  iterm2 # 加强版终端
   firefox
+  
+  iterm2 # 加强版终端
   robo-3t
-  pycharm-ce
+  rdm
+  
   the-unarchiver
   evernote
   sublime-text
@@ -107,6 +115,7 @@ apps=(
   # dash
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
+  pycharm-ce
   intellij-idea
   # phpstorm
   visual-studio-code
@@ -116,16 +125,17 @@ apps=(
   nutstore
   macpass
   sequel-pro  #下载速度慢，需手动安装
-  rdm
   docker
   kitematic
   minikube
   1password
   postman
   gpg-suite
+  wireshark
   ## work
   bearychat
   slack
+  zoomus
   pomotodo
   neteasemusic
   virtualbox
@@ -137,8 +147,6 @@ apps=(
   # shadowsocksx-ng
   # beyond-compare # 对比软件
   # qq
-  # chrome App:
-  # chromebook recovery
   #
   # Apple store:
   # pocket
@@ -146,8 +154,6 @@ apps=(
   # 付费软件：
   # reeder3
   # alfred
-  #####
-  # jadx
 )
 
 # Fonts
@@ -171,7 +177,6 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 
-#安装phpbrew
 brew link --force openssl
 brew link --force libxml2
 

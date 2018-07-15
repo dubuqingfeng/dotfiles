@@ -41,9 +41,9 @@ plugins=(
     PyMySQL
 )
 
-pip install --upgrade pip
+pip3 install --upgrade pip
 
 # pyenv
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
-pip install ${plugins[@]}
+pip3 install ${plugins[@]}
