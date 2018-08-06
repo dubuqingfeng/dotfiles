@@ -39,6 +39,7 @@ plugins=(
     Pillow
     # database
     PyMySQL
+    pandas
 )
 
 pip3 install --upgrade pip

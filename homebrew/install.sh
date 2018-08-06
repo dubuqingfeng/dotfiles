@@ -11,6 +11,7 @@ binaries=(
   python
   python@2
   go
+  dep
   homebrew/core/php
 
   dos2unix
@@ -38,6 +39,7 @@ binaries=(
   node@8
   nvm
   httpie
+  privoxy
   textql
   kafka
   # 数据库
