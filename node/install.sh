@@ -11,6 +11,9 @@ plugins=(
 	generator-generator
 	# leetcode
 	leetcode-cli
+	# wormhole
+	wormholecash
+	wormhole
 )
 
 if test ! $(which plugins[@])

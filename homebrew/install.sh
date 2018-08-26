@@ -39,6 +39,7 @@ binaries=(
   node@8
   nvm
   httpie
+  pstree
   privoxy
   textql
   kafka
@@ -68,7 +69,6 @@ binaries=(
   # homebrew/nginx/openresty
   
   #编译bitcoin
-# brew Installing
   #automake 
   berkeley-db4 
   #libtool 
@@ -84,8 +84,10 @@ binaries=(
   # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
   # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
-  kompose
+  # CI / CD
   jenkins
+  jenkins-x/jx/jx
+  kubernetes-helm
   # mysql
   # nginx
   # mongodb
@@ -99,7 +101,6 @@ binaries=(
 apps=(
   # language
   java
-  racket
   # browsers
   google-chrome
   firefox
@@ -128,7 +129,6 @@ apps=(
   macpass
   sequel-pro  #下载速度慢，需手动安装
   docker
-  kitematic
   minikube
   1password
   postman
@@ -148,7 +148,6 @@ apps=(
   # shadowsocksx # shadowsocks
   # shadowsocksx-ng
   # beyond-compare # 对比软件
-  # qq
   #
   # Apple store:
   # pocket
@@ -178,6 +177,8 @@ brew install bash
 brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
+
+brew tap jenkins-x/jx
 
 brew link --force openssl
 brew link --force libxml2
