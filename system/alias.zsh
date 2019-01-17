@@ -20,3 +20,7 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+# proxy
+alias proxyon="export http_proxy='http://127.0.0.1:8118'; export https_proxy=$http_proxy; export no_proxy='localhost,127.0.0.1,::1,192.168.99.0/24'"
+alias proxyoff="unset http_proxy; unset https_proxy; unset no_proxy;"

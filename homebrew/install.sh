@@ -63,11 +63,12 @@ binaries=(
   mcrypt
   gmp
   libevent
-  
+  maven
   zlib
   # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
   # homebrew/nginx/openresty
   
+  solidity
   #编译bitcoin
   #automake 
   berkeley-db4 
@@ -84,6 +85,7 @@ binaries=(
   # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
   # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
+  consul-template
   # CI / CD
   jenkins
   jenkins-x/jx/jx
@@ -91,7 +93,6 @@ binaries=(
   # mysql
   # nginx
   # mongodb
-
   # hub
   # legit
   # ssh-copy-id
@@ -106,41 +107,42 @@ apps=(
   firefox
   
   iterm2 # 加强版终端
-  robo-3t
-  rdm
-  
   the-unarchiver
+  # note
   evernote
+  boostnote
+  # editor
   sublime-text
+  visual-studio-code
   ngrok
   xmind
   licecap # 录屏gif软件
-  # dash
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   pycharm-ce
   intellij-idea
-  # phpstorm
-  visual-studio-code
   typora
   charles
   android-file-transfer
   nutstore
-  macpass
-  sequel-pro  #下载速度慢，需手动安装
   docker
   minikube
+  # password manager
+  macpass
   1password
   postman
   gpg-suite
   wireshark
+  neteasemusic
   ## work
   bearychat
   slack
   zoomus
-  pomotodo
-  neteasemusic
   virtualbox
+  # database client
+  sequel-pro  #下载速度慢，需手动安装
+  robo-3t
+  rdm
   #####
   # 
   # 手动安装：
@@ -152,9 +154,12 @@ apps=(
   # Apple store:
   # pocket
   # 
+  #####
   # 付费软件：
   # reeder3
   # alfred
+  # phpstorm
+  # goland
 )
 
 # Fonts
@@ -178,6 +183,7 @@ brew tap caskroom/cask
 brew tap caskroom/fonts
 brew tap caskroom/versions
 
+brew tap ethereum/ethereum
 brew tap jenkins-x/jx
 
 brew link --force openssl
@@ -185,6 +191,8 @@ brew link --force libxml2
 
 echo "Installing binaries..."
 brew install ${binaries[@]}
+
+brew linkapps solidity
 
 echo "Installing fonts..."
 brew cask install ${fonts[@]}
