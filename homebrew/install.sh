@@ -88,7 +88,7 @@ binaries=(
   consul-template
   # CI / CD
   jenkins
-  jenkins-x/jx/jx
+  # jenkins-x/jx/jx
   kubernetes-helm
   # mysql
   # nginx
@@ -136,7 +136,7 @@ apps=(
   neteasemusic
   ## work
   bearychat
-  slack
+  # slack
   zoomus
   virtualbox
   # database client
