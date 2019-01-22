@@ -9,7 +9,7 @@
 binaries=(
   # language
   python
-  python@2
+  # python@2
   go
   dep
   homebrew/core/php
