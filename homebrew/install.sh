@@ -110,6 +110,7 @@ apps=(
   the-unarchiver
   # note
   evernote
+  workflowy-beta
   boostnote
   # editor
   sublime-text
