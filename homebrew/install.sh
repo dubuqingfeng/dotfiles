@@ -139,6 +139,7 @@ apps=(
   # slack
   zoomus
   virtualbox
+  sourcetree
   # database client
   sequel-pro  #下载速度慢，需手动安装
   robo-3t
@@ -146,7 +147,6 @@ apps=(
   #####
   # 
   # 手动安装：
-  # sourcetree # git
   # shadowsocksx # shadowsocks
   # shadowsocksx-ng
   # beyond-compare # 对比软件
