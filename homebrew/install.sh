@@ -110,7 +110,7 @@ apps=(
   the-unarchiver
   # note
   evernote
-  workflowy-beta
+  #workflowy-beta
   boostnote
   # editor
   sublime-text
@@ -144,6 +144,7 @@ apps=(
   # database client
   sequel-pro  #下载速度慢，需手动安装
   robo-3t
+  wechat
   # rdm
   #####
   # 
