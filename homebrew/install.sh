@@ -140,7 +140,7 @@ apps=(
   # slack
   zoomus
   virtualbox
-  sourcetree
+  fork
   # database client
   sequel-pro  #下载速度慢，需手动安装
   robo-3t
