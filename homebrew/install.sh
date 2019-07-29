@@ -14,6 +14,7 @@ binaries=(
   dep
   homebrew/core/php
 
+  graphviz
   dos2unix
   wget
   ctags
@@ -21,6 +22,7 @@ binaries=(
   ccat
   git-flow
   tree
+  telnet
   gpg
   mackup
   z
@@ -42,12 +44,18 @@ binaries=(
   pstree
   privoxy
   textql
-  kafka
+  libconfig
+  glog
+  librdkafka
+  apache-arrow
+  protobuf
+  # 需要 java8
+  # kafka
   # 数据库
   mysql
   nmap
   imagemagick
-  # composer
+  composer
   wrk
   automake
   autoconf
@@ -73,11 +81,11 @@ binaries=(
   #automake 
   berkeley-db4 
   #libtool 
-  boost --c++11 
+  boost 
   miniupnpc 
   #openssl 
   pkg-config 
-  protobuf --c++11 
+  protobuf 
   qt5 
   #libevent
   librsvg
@@ -87,7 +95,8 @@ binaries=(
   hiredis
   consul-template
   # CI / CD
-  jenkins
+  # 需要 java8
+  # jenkins
   # jenkins-x/jx/jx
   kubernetes-helm
   # mysql
@@ -142,7 +151,8 @@ apps=(
   virtualbox
   fork
   # database client
-  sequel-pro  #下载速度慢，需手动安装
+  homebrew/cask-versions/sequel-pro-nightly
+  # sequel-pro  # mysql8 或者 一些 奔溃原因
   robo-3t
   wechat
   # rdm
@@ -194,7 +204,7 @@ brew link --force libxml2
 echo "Installing binaries..."
 brew install ${binaries[@]}
 
-brew linkapps solidity
+# brew linkapps solidity
 
 echo "Installing fonts..."
 brew cask install ${fonts[@]}
