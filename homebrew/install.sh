@@ -50,10 +50,12 @@ binaries=(
   apache-arrow
   protobuf
   # 需要 java8
+  homebrew/cask-versions/adoptopenjdk8
   # kafka
   # 数据库
   mysql
   nmap
+  zmap
   imagemagick
   composer
   wrk
@@ -72,6 +74,7 @@ binaries=(
   gmp
   libevent
   maven
+  apache-flink
   zlib
   # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
   # homebrew/nginx/openresty
@@ -105,6 +108,7 @@ binaries=(
   # hub
   # legit
   # ssh-copy-id
+  cocoapods
 )
 
 # Apps
@@ -114,7 +118,7 @@ apps=(
   # browsers
   google-chrome
   firefox
-  
+  android-studio  
   iterm2 # 加强版终端
   the-unarchiver
   # note
