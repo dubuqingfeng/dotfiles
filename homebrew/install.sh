@@ -23,6 +23,8 @@ binaries=(
   git-flow
   tree
   telnet
+  pass
+  gnupg
   gpg
   mackup
   z
@@ -50,7 +52,7 @@ binaries=(
   apache-arrow
   protobuf
   # 需要 java8
-  homebrew/cask-versions/adoptopenjdk8
+  adoptopenjdk/openjdk/adoptopenjdk8
   # kafka
   # 数据库
   mysql
@@ -84,6 +86,7 @@ binaries=(
   #automake 
   berkeley-db4 
   #libtool 
+  #flutter
   boost 
   miniupnpc 
   #openssl 
@@ -118,12 +121,17 @@ apps=(
   # browsers
   google-chrome
   firefox
-  android-studio  
+  # ide
+  android-studio
+  pycharm-ce
+  intellij-idea 
+  # term
   iterm2 # 加强版终端
+  # the rar
   the-unarchiver
   # note
   evernote
-  #workflowy-beta
+  # workflowy-beta
   boostnote
   # editor
   sublime-text
@@ -133,19 +141,18 @@ apps=(
   licecap # 录屏gif软件
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
-  pycharm-ce
-  intellij-idea
+
   typora
   charles
   android-file-transfer
-  nutstore
+  nutstore # 坚果云
   docker
   minikube
   # password manager
   macpass
   1password
-  postman
   gpg-suite
+  postman
   wireshark
   neteasemusic
   ## work
@@ -169,7 +176,7 @@ apps=(
   #
   # Apple store:
   # pocket
-  # 
+  # helm
   #####
   # 付费软件：
   # reeder3
@@ -194,10 +201,8 @@ brew install coreutils
 brew install findutils
 # Install Bash 4
 brew install bash
-# Install Homebrew Cask
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap caskroom/versions
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 
 brew tap ethereum/ethereum
 brew tap jenkins-x/jx
@@ -220,6 +225,5 @@ brew cask install --appdir="/Applications" ${apps[@]}
 
 # clean things up
 brew cleanup
-brew cask cleanup
 
 exit 0

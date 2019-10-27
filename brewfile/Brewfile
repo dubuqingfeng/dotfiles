@@ -1,0 +1,203 @@
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "ethereum/ethereum"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "jenkins-x/jx"
+cask "adoptopenjdk8"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c"
+# Collection of portable C++ source libraries
+brew "boost"
+# GNU multiple precision arithmetic library
+brew "gmp"
+# GNU compiler collection
+brew "gcc"
+# SSL/TLS cryptography library
+brew "openssl"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Columnar in-memory analytics layer designed to accelerate big data
+brew "apache-arrow"
+# Scalable batch and stream data processing
+brew "apache-flink"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# High performance key/value database
+brew "berkeley-db@4"
+# Parser generator
+brew "bison"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# Perl compatible regular expressions library
+brew "pcre"
+# Like cat but displays content with syntax highlighting
+brew "ccat"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Dependency Manager for PHP
+brew "composer"
+# Generic template rendering and notifications with Consul
+brew "consul-template"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Reimplementation of ctags(1)
+brew "ctags"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Asynchronous event library
+brew "libevent"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Go dependency management tool
+brew "dep"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Generic library support script
+brew "libtool"
+# Image manipulation library
+brew "jpeg"
+# GNU debugger
+brew "gdb"
+# Extensions to follow Vincent Driessen's branching model
+brew "git-flow"
+# Application-level logging library
+brew "glog"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Colorize logfiles and command output
+brew "grc"
+# Minimalistic client for Redis
+brew "hiredis"
+# Improved top (interactive process viewer)
+brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# The Kubernetes package manager
+brew "kubernetes-helm"
+# Configuration file processing library
+brew "libconfig"
+# The Apache Kafka C/C++ library
+brew "librdkafka"
+# Library to render SVG files using Cairo
+brew "librsvg"
+# GNOME XML library
+brew "libxml2"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# Java-based project management
+brew "maven"
+# Uniform interface to a large number of hash algorithms
+brew "mhash"
+# Replacement for the old crypt package and crypt(1) command
+brew "mcrypt"
+# UPnP IGD client library and daemon
+brew "miniupnpc"
+# Open source relational database management system
+brew "mysql", restart_service: true
+# Utility for managing network connections
+brew "netcat"
+# Port scanning utility for large networks
+brew "nmap"
+# Platform built on V8 to build network applications
+brew "node@8"
+# Manage multiple Node.js versions
+brew "nvm"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Password manager
+brew "pass"
+# General-purpose scripting language
+brew "php"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Advanced filtering web proxy
+brew "privoxy"
+# Hook preloader
+brew "proxychains-ng"
+# Show ps output as a tree
+brew "pstree"
+# Python version management
+brew "pyenv"
+# Cross-platform application and UI framework
+brew "qt"
+# Penetration testing for SQL injection and database servers
+brew "sqlmap"
+# User interface to the TELNET protocol (built from macOS Sierra sources)
+brew "telnet"
+# Executes SQL across text files
+brew "textql"
+# Simplified and community-driven man pages
+brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# CLI tool that moves files or folder to the trash
+brew "trash"
+# Internet file retriever
+brew "wget"
+# HTTP benchmarking tool
+brew "wrk"
+# Tracks most-used directories to make cd smarter
+brew "z"
+# General-purpose lossless data-compression library
+brew "zlib"
+# Network scanner for Internet-wide network studies
+brew "zmap"
+# The Solidity Contract-Oriented Programming Language
+brew "ethereum/ethereum/solidity"
+cask "1password"
+cask "android-file-transfer"
+cask "android-studio"
+cask "appcleaner"
+cask "bearychat"
+cask "boostnote"
+cask "charles"
+cask "docker"
+cask "evernote"
+cask "firefox"
+cask "font-source-code-pro"
+cask "fork"
+cask "google-chrome"
+cask "gpg-suite"
+cask "grandperspective"
+cask "intellij-idea"
+cask "iterm2"
+cask "java"
+cask "licecap"
+cask "macpass"
+cask "minikube"
+cask "neteasemusic"
+cask "ngrok"
+cask "nutstore"
+cask "postman"
+cask "pycharm-ce"
+cask "robo-3t"
+cask "sequel-pro-nightly"
+cask "sourcetree"
+cask "sublime-text"
+cask "the-unarchiver"
+cask "typora"
+cask "virtualbox"
+cask "visual-studio-code"
+cask "wechat"
+cask "wireshark"
+cask "workflowy-beta"
+cask "xmind"
+cask "zoomus"
