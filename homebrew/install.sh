@@ -77,17 +77,20 @@ binaries=(
   libevent
   maven
   apache-flink
+  apache-spark
   zlib
   # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
   # homebrew/nginx/openresty
   
   solidity
+  grpc
   #编译bitcoin
   #automake 
   berkeley-db4 
   #libtool 
   #flutter
-  boost 
+  boost
+  rocksdb
   miniupnpc 
   #openssl 
   pkg-config 
@@ -129,6 +132,7 @@ apps=(
   iterm2 # 加强版终端
   # the rar
   the-unarchiver
+  vlc
   # note
   evernote
   # workflowy-beta
