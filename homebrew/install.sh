@@ -78,6 +78,7 @@ binaries=(
   maven
   apache-flink
   apache-spark
+  hive
   zlib
   # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
   # homebrew/nginx/openresty
