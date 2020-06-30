@@ -27,6 +27,7 @@ binaries=(
   gnupg
   gpg
   mackup
+  mas
   z
   tmux
   htop
@@ -37,6 +38,7 @@ binaries=(
   netcat
   gdb
   gcc
+  grin
   # security
   sqlmap
   # Node
@@ -133,9 +135,11 @@ apps=(
   iterm2 # 加强版终端
   # the rar
   the-unarchiver
-  vlc
+  # vlc
+  calibre
   # note
   evernote
+  # notion
   # workflowy-beta
   boostnote
   # editor
@@ -169,6 +173,7 @@ apps=(
   # database client
   homebrew/cask-versions/sequel-pro-nightly
   # sequel-pro  # mysql8 或者 一些 奔溃原因
+  another-redis-desktop-manager
   robo-3t
   wechat
   # rdm
