@@ -53,8 +53,6 @@ binaries=(
   librdkafka
   apache-arrow
   protobuf
-  # 需要 java8
-  adoptopenjdk/openjdk/adoptopenjdk8
   # kafka
   # 数据库
   mysql
@@ -124,6 +122,7 @@ binaries=(
 apps=(
   # language
   java
+  adoptopenjdk/openjdk/adoptopenjdk8
   # browsers
   google-chrome
   firefox
