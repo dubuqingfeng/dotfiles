@@ -40,6 +40,7 @@ binaries=(
   gcc
   ninja
   grin
+  syncthing
   # security
   sqlmap
   # Node
