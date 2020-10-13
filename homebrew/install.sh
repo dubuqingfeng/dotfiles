@@ -38,6 +38,7 @@ binaries=(
   netcat
   gdb
   gcc
+  ninja
   grin
   # security
   sqlmap

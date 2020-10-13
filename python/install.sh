@@ -40,6 +40,9 @@ plugins=(
     # database
     PyMySQL
     pandas
+    # jupyter
+    ipython
+    jupyter
 )
 
 pip3 install --upgrade pip
