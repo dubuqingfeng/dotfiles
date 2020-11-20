@@ -171,12 +171,12 @@ apps=(
   zoomus
   virtualbox
   fork
+  notion
   # database client
   homebrew/cask-versions/sequel-pro-nightly
   # sequel-pro  # mysql8 或者 一些 奔溃原因
   another-redis-desktop-manager
   robo-3t
-  wechat
   # rdm
   #####
   # 
