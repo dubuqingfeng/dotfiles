@@ -102,6 +102,7 @@ binaries=(
   #libevent
   librsvg
   tldr
+  buf
   # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
   # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
