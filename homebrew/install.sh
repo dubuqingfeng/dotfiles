@@ -77,6 +77,8 @@ binaries=(
   mcrypt
   gmp
   libevent
+  cppcheck
+  
   maven
   apache-flink
   apache-spark
