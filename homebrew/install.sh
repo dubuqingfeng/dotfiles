@@ -143,7 +143,6 @@ apps=(
   calibre
   # note
   evernote
-  picgo
   # notion
   # workflowy-beta
   boostnote
