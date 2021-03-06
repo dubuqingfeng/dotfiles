@@ -5,17 +5,35 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-# Install homebrew packages
-sh $HOME/.dotfiles/os/macos/install.sh
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd)
 
-# Set OS X defaults
-sh $HOME/.dotfiles/os/macos/set-defaults.sh
+. ./pkg/shell/os.sh
+declare __oo__lsb_dist
 
-# Set up python env
-sh $HOME/.dotfiles/pkg/python/install.sh
+LSBDist
+if [[ ${__oo__lsb_dist} == "macos" ]]
+then
+    echo "macos: start .dotfile dot"
+    # Install homebrew packages
+    sh $HOME/.dotfiles/os/macos/install.sh
+    # Set OS X defaults
+    sh $HOME/.dotfiles/os/macos/set-defaults.sh
+    # Set up python env
+    sh $HOME/.dotfiles/pkg/python/install.sh
+    # Install global npm
+    sh $HOME/.dotfiles/pkg/node/install.sh
+    # beautify vim ls terminal
+    sh $HOME/.dotfiles/os/beautify/install.sh
+elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
+then
+    echo "ubuntu"
+    # Install apt-get packages
+    sh $HOME/.dotfiles/os/ubuntu/install.sh
+elif [[ ${__oo__lsb_dist} = "debian" ]]
+then
+    echo "debian"
+    # Install apt-get packages
+    sh $HOME/.dotfiles/os/ubuntu/install.sh
+fi
 
-# Install global npm
-sh $HOME/.dotfiles/pkg/node/install.sh
-
-# beautify vim ls terminal
-sh $HOME/.dotfiles/os/beautify/install.sh
