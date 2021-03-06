@@ -1,4 +1,5 @@
 # !/bin/sh
+# 存放公共插件，业务插件自行 npm install 对应项目安装
 
 plugins=(
 	istanbul
@@ -11,9 +12,6 @@ plugins=(
 	generator-generator
 	# leetcode
 	leetcode-cli
-	# wormhole
-	wormholecash
-	wormhole
 )
 
 if test ! $(which plugins[@])

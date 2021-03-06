@@ -141,12 +141,12 @@ apps=(
   the-unarchiver
   # vlc
   calibre
-  # note
+  #### note
   evernote
   # notion
   # workflowy-beta
   boostnote
-  # editor
+  #### editor
   sublime-text
   visual-studio-code
   ngrok
@@ -154,7 +154,6 @@ apps=(
   licecap # 录屏gif软件
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
-
   typora
   charles
   android-file-transfer
@@ -169,7 +168,6 @@ apps=(
   wireshark
   neteasemusic
   ## work
-  bearychat
   # slack
   zoomus
   virtualbox

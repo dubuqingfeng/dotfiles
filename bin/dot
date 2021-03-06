@@ -6,16 +6,16 @@
 # to make sure you're on the latest and greatest.
 
 # Install homebrew packages
-sh $HOME/.dotfiles/homebrew/install.sh
+sh $HOME/.dotfiles/os/macos/install.sh
 
 # Set OS X defaults
-sh $HOME/.dotfiles/osx/set-defaults.sh
+sh $HOME/.dotfiles/os/macos/set-defaults.sh
 
 # Set up python env
-sh $HOME/.dotfiles/python/install.sh
+sh $HOME/.dotfiles/pkg/python/install.sh
 
 # Install global npm
-sh $HOME/.dotfiles/node/install.sh
+sh $HOME/.dotfiles/pkg/node/install.sh
 
 # beautify vim ls terminal
-sh $HOME/.dotfiles/beautify/install.sh
+sh $HOME/.dotfiles/os/beautify/install.sh
