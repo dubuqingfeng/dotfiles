@@ -16,13 +16,16 @@ necessary=(
     python-pip
     pm-utils
     indicator-muiltload
+    htop
 )
 
 app=(
     gitg
     # keepasss
     # terminator
+    # 手动安装：
     # vscode
+    # nutstore
 )
 
 binaries=(
