@@ -126,5 +126,3 @@ if [ -d "$DOTFILES" ];
 
   unset config_files
 fi
-
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
