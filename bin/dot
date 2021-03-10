@@ -29,7 +29,8 @@ elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
 then
     echo "ubuntu"
     # Install apt-get packages
-    sh $HOME/.dotfiles/os/ubuntu/install.sh
+    # dpkg-reconfigure dash
+    sh $DOTFILES_ROOT/os/ubuntu/install.sh
 elif [[ ${__oo__lsb_dist} = "debian" ]]
 then
     echo "debian"

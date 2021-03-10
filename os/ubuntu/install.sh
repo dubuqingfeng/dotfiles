@@ -15,8 +15,8 @@ necessary=(
     zsh
     python-pip
     pm-utils
-    indicator-muiltload
     htop
+    ibus-pinyin
 )
 
 app=(
@@ -57,6 +57,7 @@ dep_app=(
     shadowsocks-qt5
     sublime-text-installer
     codeblocks
+    indicator-muiltload
     # docky
     # unity-tweak-tool
 )
@@ -68,8 +69,8 @@ wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - 
 
 echo "Installing Repositories..."
 
-add-apt-repository -y ${repositories[@]}
-apt-get install -qq -y ${dep_app[@]}
+# add-apt-repository -y ${repositories[@]}
+# apt-get install -qq -y ${dep_app[@]}
 
 install_typora() {
     # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
