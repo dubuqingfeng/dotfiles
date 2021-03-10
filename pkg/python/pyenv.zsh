@@ -4,6 +4,6 @@ export VIRTUALENV_NO_SITE_PACKAGES=1  # 设置所有虚拟环境与系统site-pa
 
 # pyenv
 export PYENV_ROOT="${HOME}/.pyenv"
-export PATH="${PYENV_ROOT}/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:${PYENV_ROOT}/bin:/usr/local/bin"
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
