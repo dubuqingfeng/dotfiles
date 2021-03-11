@@ -27,7 +27,6 @@ then
     sh $HOME/.dotfiles/os/beautify/install.sh
 elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
 then
-    echo "ubuntu"
     # Install apt-get packages
     # dpkg-reconfigure dash
     sh $DOTFILES_ROOT/os/ubuntu/install.sh
