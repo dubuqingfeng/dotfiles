@@ -24,6 +24,9 @@ app=(
     gitg
     # keepasss
     # terminator
+    # mysql-server
+    # myslq -u root -p
+    # SET PASSWORD FOR 'root'@'localhost'= PASSWORD('密码');
     # 手动安装：
     # vscode
     # nutstore
