@@ -1,4 +1,5 @@
 # !/bin/sh
+# sudo ./os/ubuntu/softwares.sh ohmyzsh
 
 install_ohmyzsh() {
     echo "Installing oh my zsh..."
@@ -26,6 +27,18 @@ install_typora() {
     apt-get install typora
 }
 
+# https://clickhouse.tech/#quick-start
+install_clickhouse() {
+    apt-get install apt-transport-https ca-certificates dirmngr
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E0C56BD4
+    echo "deb https://repo.clickhouse.tech/deb/stable/ main/" | sudo tee \
+        /etc/apt/sources.list.d/clickhouse.list
+    apt-get update
+    apt-get install -y clickhouse-server clickhouse-client
+    service clickhouse-server start
+    clickhouse-client
+}
+
 software=''
 if [ $# -eq 0 ]
 then
@@ -40,6 +53,9 @@ then
 elif [[ $software = "sublime" ]]
 then
     install_sublime
+elif [[ $software = "clickhouse" ]]
+then
+    install_clickhouse
 elif [[ $software = "typora" ]]
 then
     install_typora
