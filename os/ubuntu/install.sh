@@ -18,6 +18,21 @@ necessary=(
     htop
     # apt-get install -qq -y ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4 ibus-pinyin
     ibus-pinyin
+    # c++ bitcoin
+    autoconf
+    build-essential 
+    libtool 
+    autotools-dev 
+    automake 
+    pkg-config 
+    libssl-dev 
+    libevent-dev 
+    bsdmainutils
+    libboost-all-dev
+    libzmq3-dev
+    libbz2-dev
+    libsnappy-dev
+    libjemalloc-dev
 )
 
 app=(
