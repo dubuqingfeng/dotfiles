@@ -40,8 +40,10 @@ app=(
     # keepasss
     # terminator
     # mysql-server
-    # myslq -u root -p
-    # SET PASSWORD FOR 'root'@'localhost'= PASSWORD('密码');
+    # sudo cat /etc/mysql/debian.cnf
+    # mysql -u debian-sys-maint -p
+    # ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+    # mysql -u root -p
     # 手动安装：
     # vscode
     # nutstore
