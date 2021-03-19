@@ -37,19 +37,24 @@ necessary=(
 
 app=(
     gitg
-    # keepasss
-    # terminator
-    # mysql-server
-    # sudo cat /etc/mysql/debian.cnf
-    # mysql -u debian-sys-maint -p
-    # ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-    # mysql -u root -p
     # 手动安装：
+    # keepassxc
+    # terminator
+    # mysql
+    #     mysql-server
+    #     sudo cat /etc/mysql/debian.cnf
+    #     mysql -u debian-sys-maint -p
+    #     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+    #     mysql -u root -p
     # vscode
     # nutstore
     # sublime-text-installer
     # codeblocks
     # indicator-muiltload
+    # wps
+    # dbeaver
+    # smart-git
+    # slack
 )
 
 binaries=(
