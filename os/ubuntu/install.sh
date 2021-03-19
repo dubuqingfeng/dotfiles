@@ -90,7 +90,4 @@ done
 apt-get -qq update
 apt-get install -qq -y ${dep_app[@]}
 
-# install_ohmyzsh
-# install_typora
-
 rm -rf /var/lib/apt/lists/*
