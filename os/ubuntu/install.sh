@@ -33,6 +33,9 @@ necessary=(
     libbz2-dev
     libsnappy-dev
     libjemalloc-dev
+    # adb
+    android-tools-adb 
+    android-tools-fastboot
 )
 
 app=(
@@ -74,6 +77,8 @@ binaries=(
     #   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     #   dpkg -i google-chrome-stable_current_amd64.deb
     #   apt-get install -f
+    # python
+    # python-pip
     ###
 )
 
