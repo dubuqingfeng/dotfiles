@@ -7,12 +7,20 @@
 
 # Binaries
 binaries=(
-  # language
+  #### language
   python
-  # python@2
   go
   dep
   homebrew/core/php
+  node@8
+  nvm
+  java
+  adoptopenjdk/openjdk/adoptopenjdk8
+  #### database
+  mysql
+  # mongodb
+  #### security
+  sqlmap
 
   graphviz
   dos2unix
@@ -39,13 +47,7 @@ binaries=(
   gdb
   gcc
   ninja
-  grin
   syncthing
-  # security
-  sqlmap
-  # Node
-  node@8
-  nvm
   httpie
   pstree
   privoxy
@@ -56,8 +58,6 @@ binaries=(
   apache-arrow
   protobuf
   # kafka
-  # 数据库
-  mysql
   nmap
   zmap
   imagemagick
@@ -81,27 +81,23 @@ binaries=(
   
   maven
   apache-flink
-  apache-spark
+  # apache-spark
   hive
   zlib
-  # homebrew/nginx was deprecated. This tap is now empty as all its formulae were migrated.
-  # homebrew/nginx/openresty
-  
   solidity
   grpc
-  #编译bitcoin
-  #automake 
+  # automake 
   berkeley-db4 
-  #libtool 
-  #flutter
+  # libtool 
+  # flutter
   boost
   rocksdb
   miniupnpc 
-  #openssl 
+  # openssl 
   pkg-config 
   protobuf 
   qt5 
-  #libevent
+  # libevent
   librsvg
   tldr
   buf
@@ -110,74 +106,67 @@ binaries=(
   hiredis
   consul-template
   # CI / CD
-  # 需要 java8
+  earthly
   # jenkins
   # jenkins-x/jx/jx
   kubernetes-helm
-  # mysql
   # nginx
-  # mongodb
   # hub
   # legit
   # ssh-copy-id
   cocoapods
+  # grin
 )
 
 # Apps
 apps=(
-  # language
-  java
-  adoptopenjdk/openjdk/adoptopenjdk8
-  # browsers
+  #### browsers
   google-chrome
   firefox
-  # ide
+  #### ide
   android-studio
   pycharm-ce
   intellij-idea 
-  # term
   iterm2 # 加强版终端
-  # the rar
-  the-unarchiver
-  # vlc
-  calibre
   #### note
   evernote
-  # notion
+  notion
   # workflowy-beta
   boostnote
+  #### devops
+  docker
+  minikube
   #### editor
   sublime-text
   visual-studio-code
+  typora
+  #### password manager
+  macpass
+  1password
+  #### database client
+  homebrew/cask-versions/sequel-pro-nightly
+  # sequel-pro  # mysql8 或者 一些 奔溃原因
+  another-redis-desktop-manager
+  robo-3t
+  ##### other
+  the-unarchiver
   ngrok
   xmind
   licecap # 录屏gif软件
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
-  typora
   charles
   android-file-transfer
-  nutstore # 坚果云
-  docker
-  minikube
-  # password manager
-  macpass
-  1password
+  nutstore
+  calibre
   gpg-suite
   postman
   wireshark
   neteasemusic
-  ## work
   # slack
   zoomus
   virtualbox
   fork
-  notion
-  # database client
-  homebrew/cask-versions/sequel-pro-nightly
-  # sequel-pro  # mysql8 或者 一些 奔溃原因
-  another-redis-desktop-manager
-  robo-3t
   # rdm
   #####
   # 
@@ -217,6 +206,7 @@ brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
 
 brew tap ethereum/ethereum
+brew tap bufbuild/buf
 brew tap jenkins-x/jx
 
 brew link --force openssl
@@ -225,15 +215,13 @@ brew link --force libxml2
 echo "Installing binaries..."
 brew install ${binaries[@]}
 
-# brew linkapps solidity
-
 echo "Installing fonts..."
-brew cask install ${fonts[@]}
+brew install ${fonts[@]}
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" ${apps[@]}
 
 # clean things up
 brew cleanup

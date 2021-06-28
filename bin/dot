@@ -22,6 +22,7 @@ then
     # Set up python env
     sh $HOME/.dotfiles/pkg/python/install.sh
     # Install global npm
+    # source $(brew --prefix nvm)/nvm.sh
     sh $HOME/.dotfiles/pkg/node/install.sh
     # beautify vim ls terminal
     sh $HOME/.dotfiles/os/beautify/install.sh
