@@ -38,6 +38,10 @@ necessary=(
     android-tools-fastboot
 )
 
+snap_app=(
+    mockoon
+)
+
 app=(
     gitg
     # 手动安装：

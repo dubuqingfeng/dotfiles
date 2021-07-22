@@ -150,6 +150,7 @@ apps=(
   robo-3t
   ##### other
   the-unarchiver
+  mockoon
   ngrok
   xmind
   licecap # 录屏gif软件
