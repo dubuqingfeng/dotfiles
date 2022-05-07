@@ -1,4 +1,4 @@
-# My dotfiles about OS X， Ubuntu
+# My dotfiles about MacOS， Ubuntu
 
 > The set of files used to describe session initialization procedures and store user customizations are commonly referred to as "dotfiles". These files can be used to customize screen appearance, shell behavior, program specifications and aspects of your Athena session. Most dotfiles are text files, although some exist in other formats. Dotfiles generally contain one command per line and are stored in your home directory. Dotfiles usually have names that begin with a period, hence the name dotfiles. You are given some dotfiles that are necessary for you to be able to login when you get your account.
 
@@ -11,7 +11,7 @@
 # Agenda
 
 - [快速开始](#quick-start)
-  - [清除并安装 OS X](#erase-and-reinstall-os-x)
+  - [清除并安装](#erase-and-reinstall)
   - [安装 Xcode](#install-xcode)
   - [安装 dotfiles](#install-dotfiles)
   - [恢复备份](#restore-backup)
@@ -19,12 +19,12 @@
   - [dotfiles](#dotfiles)
     - [Topical](#topical)
     - [Components](#components)
-  - [OS X](#os-x)
+  - [MacOS](#MacOS)
     - [Homebrew packages](#homebrewpackages)
       - [Binaries](#binaries)
       - [Fonts](#fonts)
       - [Apps](#apps)
-    - [OS X defaults setting](#osxdefaultssetting)
+    - [MacOS defaults setting](#MacOSdefaultssetting)
   - [Mackup](#mackup)
   - [alias](#alias)
 - [Issue](#issue)
@@ -35,13 +35,13 @@
 
 ## Erase and reinstall 
 
-### OS X
+### Erase and reinstall MacOS
 
 如果打算从干净的 Mac 环境开始，请参考「[OS X：如何清除並安裝](http://support.apple.com/zh-tw/HT5943)」。
 
 1. 登出 iCloud
 2. 登出 iMessage
-3. 重置 NVRAM， 抹掉硬盘驱动器
+3. 重置 NVRAM 抹掉硬盘驱动器
 4. 打开实用工具，终端，输入以下指令：
 
 ```bash
@@ -90,9 +90,9 @@ $ ./script/bootstrap
 2. 检查并安装 [Oh My Zsh](http://ohmyz.sh/)。
 3. 检查并链接 dotfiles(`.zshrc`, `.vimrc`, `.gitconfig`,` .gitignore`, ...)。
 4. 更新并安装 brew packages(binaries, fonts, apps)。
-5. 设置 Mac OS X 的 defaults settings。
+5. 设置 Mac OS 的 defaults settings。
 6. 安装python packages(powerline-status, pyenv, ...)
-7. 对vim, ls, terminal进行美化, 主要是安装了solarized配色和powerline状态栏
+7. 对 vim, ls, terminal 进行美化, 主要是安装了 solarized 配色和 powerline 状态栏
 
 完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
 
@@ -138,14 +138,14 @@ $ mackup restore
 - dotfiles 只專注在 **topic/*.symlink**、**topic/path.zsh** 的配置。
 
 
-## OS X
+## MacOS
 
-`bin/dot` 会在`script/bootstrap`最后执行, 负责安装OS X的程序和修改系统配置
+`bin/dot` 会在`script/bootstrap`最后执行, 负责安装 MacOS 的程序和修改系统配置
 
 执行 `$ dot` 之后，它会执行下面的脚本:
 
 1. `$HOME/.dotfiles/os/macos/install.sh` - Homebrew packages
-2. `$HOME/.dotfiles/os/macos/set-defaults.sh` - OS X defaults setting
+2. `$HOME/.dotfiles/os/macos/set-defaults.sh` - MacOS defaults setting
 3. `$HOME/.dotfiles/pkg/python/install.sh`   - Set up python env
 4. `$HOME/.dotfiles/os/beautify/install.sh` - beautify vim, terminal, ls
 
@@ -188,7 +188,7 @@ apps=(
 | --- | --- |
 | dos2unix | 文档格式转换 |
 | wget | wget工具 |
-| python | OS X自带的python没有pip |
+| python | MacOS 自带的python没有pip |
 | ctags | 方便代码阅读 |
 | [grc](http://kassiopeia.juls.savba.sk/~garabik/software/grc/README.txt)| log上色 |
 | [git-flow](https://github.com/nvie/gitflow) | Git branch manage model |
@@ -259,9 +259,9 @@ apps=(
 | jdk1.6 | android 编译 |
 
 
-### OS X defaults setting
+### MacOS defaults setting
 
-执行 `$ ./os/macos/set-defaults.sh` 之后，程序会更改Mac OS X的一些系统设置, 根据个人喜欢和需求修改这个文件，或是参考 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) 整理好的配置。
+执行 `$ ./os/macos/set-defaults.sh` 之后，程序会更改 Mac OS 的一些系统设置, 根据个人喜欢和需求修改这个文件，或是参考 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) 整理好的配置。
 
 以下是目前设定的配置：
 
@@ -309,13 +309,11 @@ apps=(
 | 关闭 Dashboard | `defaults write com.apple.dashboard mcx-disabled -bool true` |
 | 将 Dashboard 从多重桌面之中移除 | `defaults write com.apple.dock dashboard-in-overlay -bool true` | 
 | 自动显示和隐藏dock | `defaults write com.apple.dock autohide -bool true` |
-| 将隐藏的应用程序 Dock 图标用半透明显示 | `defaults write com.apple.dock showhidden -bool true` |
-
-//	Finder默认位置设置为个人
+| 将隐藏的应用程序 Dock 图标用半透明显示 | `defaults write com.apple.dock showhidden -bool true` 
 
 ## Mackup
 
-当初始环境都安装好了以后, 就是需要备份了。除了 `.zsrc`、`.vimrc` 这类 dotfile 比较适合放置Github上面之外，其他像是 Sublime 的 plugin、iTerm2 的 setting、Oh My Zsh 的 plugin、等等很多一般程序的配置需要备份, 这些不适合放在Github上面。所以这里介紹 [Mackup](https://github.com/lra/mackup) 
+当初始环境都安装好了以后, 就是需要备份了。除了 `.zsrc`、`.vimrc` 这类 dotfile 比较适合放置 Github 上面之外，其他像是 Sublime 的 plugin、iTerm2 的 setting、Oh My Zsh 的 plugin、等等很多一般程序的配置需要备份, 这些不适合放在Github上面。所以这里介紹 [Mackup](https://github.com/lra/mackup) 
 
 **它将你想要备份的文件转移到 Dropbox ,Google Drive, 百度云这样的云盘在本地的同步目录如 `~/dropbox/mackup`, 然后使用`ln -s`进行链接 `link -> ~/dropbox/mackup`**
 
