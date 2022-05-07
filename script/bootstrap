@@ -76,11 +76,11 @@ elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
 then
     echo "ubuntu"
     BASE_DIR=`pwd`
-    #建立gitconfig链接
+    # 建立gitconfig链接
     echo "配置Git..."
     git config --global user.name "dubuqingfeng"
     git config --global user.email 1135326346@qq.com
-    #建立terminator配置链接
+    # 建立terminator配置链接
     echo "配置terminator..."
     # mkdir -p $HOME/.config/terminator
     # if [ -L $HOME/.config/terminator/config ];then

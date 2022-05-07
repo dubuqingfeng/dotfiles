@@ -18,17 +18,17 @@ plugins=(
     # Generate markdown API document from Postman.
     postdown
     db
-    #a statusline plugin for vim, and provides statuslines and prompts for several other applications
+    # a statusline plugin for vim, and provides statuslines and prompts for several other applications
     powerline-status
-    #automatically formats Python code to conform to the PEP 8
+    # automatically formats Python code to conform to the PEP 8
     autopep8
-    #PyFlakes\pep8\Ned Batchelder’s McCabe script
+    # PyFlakes\pep8\Ned Batchelder’s McCabe script
     flake8
-    #Pythonic command line arguments parser
+    # Pythonic command line arguments parser
     docopt
-    #World Timezone Definitions for Python
+    # World Timezone Definitions for Python
     pytz
-    #backport of the new features
+    # backport of the new features
     unittest2
     # pelican
     pelican

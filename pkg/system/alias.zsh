@@ -22,5 +22,5 @@ then
 fi
 
 # proxy
-alias proxyon="export http_proxy='127.0.0.1:8118'; export https_proxy='127.0.0.1:8118'; export no_proxy='localhost,127.0.0.1,::1,192.168.99.0/24'"
+alias proxyon="export http_proxy='127.0.0.1:7890'; export https_proxy='127.0.0.1:7890'; export no_proxy='localhost,127.0.0.1,::1,192.168.99.0/24'"
 alias proxyoff="unset http_proxy; unset https_proxy; unset no_proxy;"

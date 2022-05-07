@@ -1,11 +1,10 @@
-# My dotfiles about OS X
-
+# My dotfiles about OS X， Ubuntu
 
 > The set of files used to describe session initialization procedures and store user customizations are commonly referred to as "dotfiles". These files can be used to customize screen appearance, shell behavior, program specifications and aspects of your Athena session. Most dotfiles are text files, although some exist in other formats. Dotfiles generally contain one command per line and are stored in your home directory. Dotfiles usually have names that begin with a period, hence the name dotfiles. You are given some dotfiles that are necessary for you to be able to login when you get your account.
 
 ![iMac-MacBook-flat](http://i.imgur.com/GBpjrHB.png)
 
-这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles-mac) 是基于 zoumo 的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
+这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles) 是基于 zoumo 的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
 
 更多的 dotfiles 请参考 [GitHub does dotfiles](https://dotfiles.github.io/)。
 
@@ -34,9 +33,24 @@
 
 # Quick Start
 
-## Erase and reinstall OS X
+## Erase and reinstall 
+
+### OS X
 
 如果打算从干净的 Mac 环境开始，请参考「[OS X：如何清除並安裝](http://support.apple.com/zh-tw/HT5943)」。
+
+1. 登出 iCloud
+2. 登出 iMessage
+3. 重置 NVRAM， 抹掉硬盘驱动器
+4. 打开实用工具，终端，输入以下指令：
+
+```bash
+diskutil secureErase freespace VALUE /Volumes/DRIVE (DRIVE example： Macintosh\ HD，Macintosh\ HD 数据)
+```
+
+Value 在 0-4 之间，0 表示全盘覆盖写入单次 0，1 表示全盘覆盖写入随机数字，2 表示全盘覆盖擦除 7 次，3 表示全盘覆盖擦除 35 次，4 表示全盘覆盖擦除 3 次。需要注意的是，SSD 擦除太多次会影响到它的使用寿命。
+
+5. 重新安装 macOS
 
 ## Install Xcode
 
@@ -49,6 +63,8 @@ xcode-select:no developer tools were found at '/Applications/Xcode.app',requesti
 Choose an option in the dialog to download the command Line developer tools.
 ```
 
+然后执行：
+
 ```bash
 $ xcode-select --install
 ```
@@ -58,14 +74,13 @@ $ xcode-select --install
 使用 git clone 一份到 `$HOME` 目录底下的 `.dotfiles` 文件夹里面:
 
 ```bash
-$ git clone https://github.com/dubuqingfeng/dotfiles-mac.git ~/.dotfiles
+$ git clone https://github.com/dubuqingfeng/dotfiles.git ~/.dotfiles
 ```
 
 进入 `.dotfiles` 文件夹, 然后安装dotfiles:
 
 ```bash
 $ cd ~/.dotfiles
-
 $ ./script/bootstrap
 ```
 
@@ -79,7 +94,7 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对vim, ls, terminal进行美化, 主要是安装了solarized配色和powerline状态栏
 
-完成之后, 手动安装一些其他软件(ShadowsocksX,sequel-pro,sourcetree, 以及一些较大的软件java，docker)
+完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
 
 ## Restore backup
 
@@ -129,14 +144,14 @@ $ mackup restore
 
 执行 `$ dot` 之后，它会执行下面的脚本:
 
-1. `$HOME/.dotfiles/homebrew/install.sh` - Homebrew packages
-2. `$HOME/.dotfiles/osx/set-defaults.sh` - OS X defaults setting
-3. `$HOME/.dotfiles/python/install.sh`   - Set up python env
-4. `$HOME/.dotfiles/beautify/install.sh` - beautify vim, terminal, ls
+1. `$HOME/.dotfiles/os/macos/install.sh` - Homebrew packages
+2. `$HOME/.dotfiles/os/macos/set-defaults.sh` - OS X defaults setting
+3. `$HOME/.dotfiles/pkg/python/install.sh`   - Set up python env
+4. `$HOME/.dotfiles/os/beautify/install.sh` - beautify vim, terminal, ls
 
 ### Homebrew packages
 
-执行 `$ ./homebrew/install.sh` 的时候, 脚本会使用 [Homebrew](http://brew.sh/) 和 [Homebrew Cask](http://caskroom.io/) 來安裝 **binary**、**font** 還有 **app**，可以根据个人的需求增减packages的安装:
+执行 `$ $HOME/.dotfiles/os/macos/install.sh` 的时候, 脚本会使用 [Homebrew](http://brew.sh/) 來安裝 **binary**、**font** 還有 **app**，可以根据个人的需求增减packages的安装:
 
 ```bash
 binaries=(
@@ -146,7 +161,7 @@ binaries=(
 )
 ```
 
-字体都是以 **font-XXX** 的形式命名，可以用 `$ brew cask search /font-XXX/` 搜索是否存在。
+字体都是以 **font-XXX** 的形式命名，可以用 `$ brew search /font-XXX/` 搜索是否存在。
 
 ```bash
 fonts=(
@@ -155,7 +170,7 @@ fonts=(
 )
 ```
 
-应用程序可以用 `$ brew cask search XXX` 或是 [Cask Search](http://caskroom.io/search) 网站搜索是否存在。
+应用程序可以用 `$ brew search XXX` 或是 [Homebrew](http://brew.sh/) 网站搜索是否存在。
 
 ```bash
 apps=(
@@ -215,7 +230,7 @@ apps=(
 | licecap | 一种录屏软件 |
 | appcleaner | app卸载软件 |
 | grandperspective | grandperspective # 磁盘空间分析软件 |
-| mactex | mac LaTeX |
+| mactex | mac LaTeX（比较大一点） |
 | intel-haxm | intel-haxm |
 | wireshark --with-qt | wireshark --with-qt |
 | intellij-idea | intellij-idea |
@@ -239,17 +254,14 @@ apps=(
 | --- | --- |
 | dash | dash |
 | [sourcetree](https://www.sourcetreeapp.com/) | git client |
-| [sequel-pro](https://www.sequelpro.com/) | mysql client |
-| Shadowsocks | Bypass firewall |
 | beyond-compare | beyond-compare 一个优秀的文件/目录对比工具 |
 | virtualbox | virtualbox 虚拟机 |
-| qq | qq |
 | jdk1.6 | android 编译 |
 
 
 ### OS X defaults setting
 
-执行 `$ ./osx/set-defaults.sh` 之后，程序会更改Mac OS X的一些系统设置, 根据个人喜欢和需求修改这个文件，或是参考 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) 整理好的配置。
+执行 `$ ./os/macos/set-defaults.sh` 之后，程序会更改Mac OS X的一些系统设置, 根据个人喜欢和需求修改这个文件，或是参考 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) 整理好的配置。
 
 以下是目前设定的配置：
 
@@ -388,15 +400,13 @@ alias rm="trash" # 这个需要brew install trash
 
 # Issue
 
-有一些程序使用的破解版本, 需要手动安装
-以及有一些brew cask安装不上的app
+需要手动安装以及有一些brew cask安装不上的app
 
 | name | 说明 |
 | --- | --- |
 | beyond-compare | 兼容问题 |
 | postman | chrome-extendsion |
 | sequel-pro | mysql client |
-| Shadowsocks | --- |
 | sourcetree | git客户端 |
 
 以及一些Chrome 扩展或者应用：
@@ -430,7 +440,7 @@ alias rm="trash" # 这个需要brew install trash
 
 ```
 brew upgrade xxx
-brew cask restall xxx
+brew restall xxx
 ```
 
 # Reference

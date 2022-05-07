@@ -144,8 +144,8 @@ apps=(
   macpass
   1password
   #### database client
-  homebrew/cask-versions/sequel-pro-nightly
   # sequel-pro  # mysql8 或者 一些 奔溃原因
+  homebrew/cask-versions/sequel-pro-nightly
   another-redis-desktop-manager
   robo-3t
   ##### other
@@ -172,8 +172,6 @@ apps=(
   #####
   # 
   # 手动安装：
-  # shadowsocksx # shadowsocks
-  # shadowsocksx-ng
   # beyond-compare # 对比软件
   #
   # Apple store:
