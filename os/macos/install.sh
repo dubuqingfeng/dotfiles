@@ -12,7 +12,8 @@ binaries=(
   go
   dep
   homebrew/core/php
-  node@8
+  node
+  svn
   nvm
   java
   adoptopenjdk/openjdk/adoptopenjdk8
@@ -206,7 +207,6 @@ brew tap homebrew/cask-versions
 
 brew tap ethereum/ethereum
 brew tap bufbuild/buf
-brew tap jenkins-x/jx
 
 brew link --force openssl
 brew link --force libxml2

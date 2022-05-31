@@ -63,7 +63,7 @@ xcode-select:no developer tools were found at '/Applications/Xcode.app',requesti
 Choose an option in the dialog to download the command Line developer tools.
 ```
 
-然后执行：
+然后执行 (m1 芯片或许不需要)：
 
 ```bash
 $ xcode-select --install
@@ -93,6 +93,22 @@ $ ./script/bootstrap
 5. 设置 Mac OS 的 defaults settings。
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对 vim, ls, terminal 进行美化, 主要是安装了 solarized 配色和 powerline 状态栏
+
+问题1:
+
+这里如果出现 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused ,建议配置代理
+
+问题2:
+
+```
+/Users/dubuqingfeng/.zshenv:.:2: no such file or directory: /Users/dubuqingfeng/.cargo/env
+```
+
+没有安装 rust，建议通过以下命令安装：
+
+```
+curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
+```
 
 完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
 

@@ -8,7 +8,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "jenkins-x/jx"
 cask "adoptopenjdk8"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c"
@@ -117,7 +116,7 @@ brew "netcat"
 # Port scanning utility for large networks
 brew "nmap"
 # Platform built on V8 to build network applications
-brew "node@8"
+brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
 # Display directories as trees (with optional color/HTML output)
