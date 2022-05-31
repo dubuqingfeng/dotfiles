@@ -22,6 +22,8 @@ binaries=(
   # mongodb
   #### security
   sqlmap
+  nmap
+  zmap
 
   graphviz
   dos2unix
@@ -59,8 +61,6 @@ binaries=(
   apache-arrow
   protobuf
   # kafka
-  nmap
-  zmap
   imagemagick
   composer
   wrk
@@ -88,7 +88,7 @@ binaries=(
   solidity
   grpc
   # automake 
-  berkeley-db4 
+  berkeley-db@4 
   # libtool 
   # flutter
   boost
@@ -102,15 +102,13 @@ binaries=(
   librsvg
   tldr
   buf
-  # /usr/local/Cellar/php/7.2.5/bin/pecl install swoole
-  # /usr/local/Cellar/php/7.2.5/bin/pecl install xdebug
   hiredis
   consul-template
   # CI / CD
   earthly
   # jenkins
   # jenkins-x/jx/jx
-  kubernetes-helm
+  helm
   # nginx
   # hub
   # legit
@@ -125,12 +123,12 @@ apps=(
   google-chrome
   firefox
   #### ide
-  android-studio
+  # android-studio
   pycharm-ce
-  intellij-idea 
+  # intellij-idea 
   iterm2 # 加强版终端
   #### note
-  evernote
+  yinxiangbiji
   notion
   # workflowy-beta
   boostnote
@@ -143,7 +141,7 @@ apps=(
   typora
   #### password manager
   macpass
-  1password
+  # 1password
   #### database client
   # sequel-pro  # mysql8 或者 一些 奔溃原因
   homebrew/cask-versions/sequel-pro-nightly
@@ -160,16 +158,13 @@ apps=(
   charles
   android-file-transfer
   nutstore
-  calibre
+  # calibre
   gpg-suite
   postman
   wireshark
   neteasemusic
-  # slack
-  zoomus
   virtualbox
   fork
-  # rdm
   #####
   # 
   # 手动安装：
@@ -220,7 +215,7 @@ brew install ${fonts[@]}
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps..."
-brew install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 # clean things up
 brew cleanup
