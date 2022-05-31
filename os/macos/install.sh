@@ -16,7 +16,7 @@ binaries=(
   svn
   nvm
   java
-  adoptopenjdk/openjdk/adoptopenjdk8
+  adoptopenjdk/openjdk/adoptopenjdk8 # brew install --build-from-source openjdk@8
   #### database
   mysql
   # mongodb
@@ -47,7 +47,7 @@ binaries=(
   pyenv
   gettext
   netcat
-  gdb
+  gdb # m1 芯片暂不支持
   gcc
   ninja
   syncthing
@@ -134,7 +134,7 @@ apps=(
   boostnote
   #### devops
   docker
-  minikube
+  # minikube
   #### editor
   sublime-text
   visual-studio-code
