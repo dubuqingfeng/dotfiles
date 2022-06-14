@@ -163,8 +163,8 @@ apps=(
   postman
   wireshark
   neteasemusic
-  virtualbox
   fork
+  # virtualbox # not support m1
   #####
   # 
   # 手动安装：
