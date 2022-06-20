@@ -81,7 +81,7 @@ Plugin 'tomasr/molokai'
 " Git/mercurial/others diff icons on the side of the file lines
 Plugin 'mhinz/vim-signify'
 " Automatically sort python imports
-Plugin 'fisadev/vim-isort'
+" Plugin 'fisadev/vim-isort'
 " Drag visual blocks arround
 Plugin 'fisadev/dragvisuals.vim'
 " Window chooser
@@ -554,3 +554,5 @@ let g:vim_markdown_frontmatter=1
 " and when you open this, you can manually trigger preview
 " via the command :InstantMarkdownPreview
 let g:instant_markdown_autostart = 0
+
+let g:snipMate = { 'snippet_version' : 1 }

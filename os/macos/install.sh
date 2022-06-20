@@ -38,6 +38,7 @@ binaries=(
   gnupg
   gpg
   mackup
+  libusb
   mas
   z
   tmux

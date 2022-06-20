@@ -7,6 +7,7 @@ alias cls="clean"
 # python versions
 alias ve="pyenv local"
 alias rm="trash"
+# alias python="python3"
 #alias g++="g++-4.8"
 #alias gcc="gcc-4.8"
 # 
