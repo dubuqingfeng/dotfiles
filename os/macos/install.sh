@@ -17,6 +17,7 @@ fi
 light_binaries=(
   htop
   svn
+  trash
 )
 
 # Apps
@@ -234,9 +235,6 @@ brew tap homebrew/cask-versions
 brew tap ethereum/ethereum
 brew tap bufbuild/buf
 
-echo "Installing fonts..."
-brew install ${fonts[@]}
-
 if [[ $mode = "normal" ]]
 then
   echo "Installing binaries..."
@@ -256,6 +254,9 @@ then
   echo "Installing apps..."
   brew install --cask --appdir="/Applications" ${light_apps[@]}
 fi
+
+echo "Installing fonts..."
+brew install ${fonts[@]}
 
 # clean things up
 brew cleanup
