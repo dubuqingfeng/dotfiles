@@ -94,9 +94,18 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对 vim, ls, terminal 进行美化, 主要是安装了 solarized 配色和 powerline 状态栏
 
+完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
+
+
+### Bootstrap Muilt Devices
+
+现在可能不止有一个 mac，如何管理多台设备的软件安装配置？
+
+### Bootstrap Question
+
 问题1:
 
-这里如果出现 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused ,建议配置代理
+这里如果出现 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused, 建议配置代理
 
 问题2:
 
@@ -107,10 +116,13 @@ $ ./script/bootstrap
 没有安装 rust，建议通过以下命令安装：
 
 ```
+brew install rustup
+rustup-init
+
+或者：
+
 curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
 ```
-
-完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
 
 ## Restore backup
 

@@ -5,6 +5,35 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+mode=''
+if [ $# -eq 0 ]
+then
+  mode="normal"
+else
+  mode=$1
+fi
+
+# Binaries
+light_binaries=(
+  htop
+  svn
+)
+
+# Apps
+light_apps=(
+  #### browsers
+  google-chrome
+  firefox
+  iterm2 # 加强版终端
+  #### editor
+  sublime-text
+  visual-studio-code
+  grandperspective # 磁盘空间分析软件
+  #### password manager
+  macpass
+  appcleaner # 卸载软件
+)
+
 # Binaries
 binaries=(
   #### language
@@ -189,6 +218,7 @@ fonts=(
 )
 
 echo "Update Homebrew..."
+
 # Update homebrew recipes
 brew update
 
@@ -198,25 +228,34 @@ brew install coreutils
 brew install findutils
 # Install Bash 4
 brew install bash
+
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
-
 brew tap ethereum/ethereum
 brew tap bufbuild/buf
-
-brew link --force openssl
-brew link --force libxml2
-
-echo "Installing binaries..."
-brew install ${binaries[@]}
 
 echo "Installing fonts..."
 brew install ${fonts[@]}
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-echo "Installing apps..."
-brew install --cask --appdir="/Applications" ${apps[@]}
+if [[ $mode = "normal" ]]
+then
+  echo "Installing binaries..."
+  brew install ${binaries[@]}
+
+  # Install apps to /Applications
+  # Default is: /Users/$user/Applications
+  echo "Installing apps..."
+  brew install --cask --appdir="/Applications" ${apps[@]}
+elif [[ $mode = "light" ]]
+then
+  echo "Installing Light binaries..."
+  brew install ${light_binaries[@]}
+
+  # Install apps to /Applications
+  # Default is: /Users/$user/Applications
+  echo "Installing apps..."
+  brew install --cask --appdir="/Applications" ${light_apps[@]}
+fi
 
 # clean things up
 brew cleanup

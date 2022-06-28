@@ -61,17 +61,41 @@ install_dotfiles () {
 install_ohmyzsh
 install_dotfiles
 
+install_dot () {
+  # 完整安装
+  if source bin/dot
+  then
+   success "dependencies installed"
+  else
+   fail "error installing dependencies"
+  fi
+}
+
+install_light_dot () {
+  # 轻量化安装
+  if source bin/light
+  then
+   success "dependencies installed"
+  else
+   fail "error installing dependencies"
+  fi
+}
+
 if [[ ${__oo__lsb_dist} == "macos" ]]
 then
     echo "macos: start .dotfile bootstraps"
     install_homebrew
     info "installing dependencies"
-    if source bin/dot
-    then
-      success "dependencies installed"
+    read -p "please input the mode: " mode
+    if [[ ${mode} == "normal" ]]; then
+      install_dot
+    elif [[ ${mode} == "light" ]]; then
+      install_light_dot
     else
-      fail "error installing dependencies"
+      install_dot
     fi
+
+    
 elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
 then
     echo "ubuntu"
