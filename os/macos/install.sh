@@ -18,6 +18,7 @@ light_binaries=(
   htop
   svn
   trash
+  wget
 )
 
 # Apps
