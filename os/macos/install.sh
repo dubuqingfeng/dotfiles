@@ -34,6 +34,7 @@ light_apps=(
   #### password manager
   macpass
   appcleaner # 卸载软件
+  nutstore
 )
 
 # Binaries
@@ -161,9 +162,9 @@ apps=(
   iterm2 # 加强版终端
   #### note
   yinxiangbiji
-  notion
+  # notion
   # workflowy-beta
-  boostnote
+  # boost-note
   #### devops
   docker
   # minikube

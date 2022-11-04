@@ -72,7 +72,7 @@ install_dot () {
 }
 
 install_light_dot () {
-  # 轻量化安装
+  # 轻量化安装，用于非主力电脑
   if source bin/light
   then
    success "dependencies installed"
@@ -86,7 +86,7 @@ then
     echo "macos: start .dotfile bootstraps"
     install_homebrew
     info "installing dependencies"
-    read -p "please input the mode: " mode
+    read -p "please input the mode(example: light, normal): " mode
     if [[ ${mode} == "normal" ]]; then
       install_dot
     elif [[ ${mode} == "light" ]]; then

@@ -54,9 +54,10 @@ Value 在 0-4 之间，0 表示全盘覆盖写入单次 0，1 表示全盘覆盖
 
 ## Install Xcode
 
-1. 更新APP store
-2. 安装Xcode
-3. 安装Xcode Command Line Tools
+1. 更新系统和 APP store
+2. 安装 Xcode
+3. 安装 Xcode Command Line Tools
+
 // 输入gcc或者git，会提示
 ```
 xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. 

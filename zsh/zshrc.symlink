@@ -46,7 +46,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z extract zsh-autocomplete zsh-syntax-highlighting zsh-completions)
+#plugins=(z extract zsh-autocomplete zsh-syntax-highlighting zsh-completions)
 #plugins=(autojump zsh-autosuggestions zsh-completions)
 # User configuration
 
@@ -126,6 +126,10 @@ if [ -d "$DOTFILES" ];
 
   unset config_files
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="$PATH:/Users/oker/.foundry/bin"
 
