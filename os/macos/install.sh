@@ -15,6 +15,9 @@ fi
 
 # Binaries
 light_binaries=(
+  tig
+  bat
+  fzf
   htop
   svn
   trash
@@ -80,7 +83,11 @@ binaries=(
   pyenv
   gettext
   netcat
-  gdb # m1 芯片暂不支持
+  bat
+  fzf
+  exa
+  tig
+  # gdb # m1 芯片暂不支持
   gcc
   ninja
   syncthing
@@ -112,11 +119,16 @@ binaries=(
   gmp
   libevent
   cppcheck
+  cmake
+  yarn
+  # rust
+  cbindgen
   
+  ngrok
   maven
   apache-flink
   # apache-spark
-  hive
+  # hive
   zlib
   solidity
   grpc
@@ -182,8 +194,6 @@ apps=(
   robo-3t
   ##### other
   the-unarchiver
-  mockoon
-  ngrok
   xmind
   licecap # 录屏gif软件
   appcleaner # 卸载软件
