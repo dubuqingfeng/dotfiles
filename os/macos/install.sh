@@ -87,6 +87,9 @@ binaries=(
   fzf
   exa
   tig
+  # lrzsz
+  zssh
+  lrzsz
   # gdb # m1 芯片暂不支持
   gcc
   ninja
