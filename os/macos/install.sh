@@ -15,6 +15,7 @@ fi
 
 # Binaries
 light_binaries=(
+  tmux
   tig
   bat
   fzf
