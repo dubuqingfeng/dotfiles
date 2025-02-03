@@ -192,7 +192,7 @@ apps=(
   neteasemusic
   fork
   #####
-  # Apple store:
+  # Apple store
   # pocket
   #####
   # 付费软件：
