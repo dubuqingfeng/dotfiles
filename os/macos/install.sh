@@ -29,7 +29,6 @@ light_binaries=(
 light_apps=(
   #### browsers
   google-chrome
-  firefox
   iterm2 # 加强版终端
   #### editor
   sublime-text
@@ -56,11 +55,6 @@ binaries=(
   #### database
   mysql
   # mongodb
-  #### security
-  sqlmap
-  nmap
-  zmap
-
   graphviz
   dos2unix
   wget
@@ -155,47 +149,33 @@ binaries=(
   consul-template
   # CI / CD
   earthly
-  # jenkins
-  # jenkins-x/jx/jx
-  helm
   # nginx
   # hub
   # legit
   # ssh-copy-id
   cocoapods
-  # grin
 )
 
 # Apps
 apps=(
   #### browsers
   google-chrome
-  firefox
   #### ide
-  # android-studio
   pycharm-ce
-  # intellij-idea 
   iterm2 # 加强版终端
-  #### note
-  yinxiangbiji
-  # notion
-  # workflowy-beta
-  # boost-note
   #### devops
   docker
-  # minikube
   #### editor
   sublime-text
   visual-studio-code
   typora
   #### password manager
   macpass
-  # 1password
   #### database client
   # sequel-pro  # mysql8 或者 一些 奔溃原因
   homebrew/cask-versions/sequel-pro-nightly
-  another-redis-desktop-manager
-  robo-3t
+  # another-redis-desktop-manager
+  # robo-3t
   ##### other
   the-unarchiver
   xmind
@@ -211,18 +191,11 @@ apps=(
   wireshark
   neteasemusic
   fork
-  # virtualbox # not support m1
   #####
-  # 
-  # 手动安装：
-  # beyond-compare # 对比软件
-  #
   # Apple store:
   # pocket
-  # helm
   #####
   # 付费软件：
-  # reeder3
   # alfred
   # phpstorm
   # goland
