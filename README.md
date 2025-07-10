@@ -95,8 +95,9 @@ $ ./script/bootstrap
 6. 安装python packages(powerline-status, pyenv, ...)
 7. 对 vim, ls, terminal 进行美化, 主要是安装了 solarized 配色和 powerline 状态栏
 
-完成之后, 手动安装一些其他软件(sequel-pro, sourcetree, 以及一些较大的软件java，docker)
-
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
 
 ### Bootstrap Muilt Devices
 
