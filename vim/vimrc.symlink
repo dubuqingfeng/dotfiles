@@ -77,7 +77,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 " awesome colorscheme
-Plugin 'tomasr/molokai'
+" Plugin 'tomasr/molokai' " https://github.com/tomasr/molokai
 " Git/mercurial/others diff icons on the side of the file lines
 Plugin 'mhinz/vim-signify'
 " Automatically sort python imports
@@ -129,7 +129,7 @@ Plugin 'matchit.zip'
 " Gvim colorscheme
 Plugin 'Wombat'
 " Yank history navigation
-Plugin 'YankRing.vim'
+" Plugin 'YankRing.vim'
 
 " ============================================================================
 " Install plugins the first time vim runs
@@ -165,6 +165,9 @@ set autoread
 set confirm
 " no backup files
 set nobackup
+set noswapfile     " no swap files
+set nowritebackup  " only in case you don't want a backup file while editing
+set noundofile     " no undo files
 " other settings 
 set langmenu=zh_CN.UTF-8
 set mouse=a
@@ -269,10 +272,10 @@ set wildmode=full
 " better backup, swap and undos storage
 set directory=~/.vim/dirs/tmp     " directory to place swap files in
 set backup                        " make backup files
-set backupdir=~/.vim/dirs/backups " where to put backup files
-set undofile                      " persistent undos - undo after you re-open the file
-set undodir=~/.vim/dirs/undos
-set viminfo+=n~/.vim/dirs/viminfo
+" set backupdir=~/.vim/dirs/backups " where to put backup files
+" set undofile                      " persistent undos - undo after you re-open the file
+" set undodir=~/.vim/dirs/undos
+" set viminfo+=n~/.vim/dirs/viminfo
 " store yankring history file there too
 let g:yankring_history_dir = '~/.vim/dirs/'
 
