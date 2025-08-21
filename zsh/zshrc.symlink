@@ -12,7 +12,7 @@ ZSH_THEME_RANDOM_CANDIDATES=(
   "awesomepanda"
 )
 
-HIST_STAMPS="yyyy-mm-dd" 
+HIST_STAMPS="yyyy-mm-dd"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -52,7 +52,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(z extract zsh-autocomplete zsh-syntax-highlighting zsh-completions)
-# zsh-autocomplete dacs 
+# zsh-autocomplete dacs
 
 if [[ -n $DACS ]]; then
   plugins=(z extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
@@ -141,3 +141,15 @@ fi
 
 export BAT_THEME="Coldark-Dark"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# . "$HOME/.local/bin/env"
+# export PATH="$HOME/.local/bin:$PATH"
+# node / nvm
+# export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# java
+# export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+source /Users/dubuqingfeng/.dacs_run_profile
