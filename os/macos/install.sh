@@ -23,21 +23,34 @@ light_binaries=(
   svn
   trash
   wget
+  zellij
 )
 
 # Apps
 light_apps=(
+  # flclash
   #### browsers
   google-chrome
-  iterm2 # 加强版终端
+  iterm2
   #### editor
   sublime-text
   visual-studio-code
-  grandperspective # 磁盘空间分析软件
+  grandperspective
   #### password manager
   macpass
-  appcleaner # 卸载软件
+  appcleaner
   nutstore
+  fork
+  #### ai
+  claude-code
+  codex
+  cursor-cli
+  #### cc switch
+  # brew tap farion1231/ccswitch
+  # brew install --cask cc-switch
+  tailscale-app
+  obsidian
+  zed
 )
 
 # Binaries
@@ -178,8 +191,6 @@ apps=(
   # robo-3t
   ##### other
   the-unarchiver
-  xmind
-  licecap # 录屏gif软件
   appcleaner # 卸载软件
   grandperspective # 磁盘空间分析软件
   charles
@@ -221,7 +232,7 @@ brew install bash
 
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
-brew tap ethereum/ethereum
+# brew tap ethereum/ethereum
 brew tap bufbuild/buf
 
 if [[ $mode = "normal" ]]
