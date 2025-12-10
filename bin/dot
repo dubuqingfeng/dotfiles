@@ -4,6 +4,10 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
+#
+# Usage:
+#   dot         - Full installation (default)
+#   dot light   - Light installation (skip Python and Node.js setup)
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd)
@@ -11,21 +15,34 @@ DOTFILES_ROOT=$(pwd)
 . ./pkg/shell/os.sh
 declare __oo__lsb_dist
 
+# Parse arguments
+MODE=${1:-full}
+
 LSBDist
 if [[ ${__oo__lsb_dist} == "macos" ]]
 then
-    echo "macos: start .dotfile dot"
-    # Install homebrew packages
-    sh $HOME/.dotfiles/os/macos/install.sh
-    # Set OS X defaults
-    sh $HOME/.dotfiles/os/macos/set-defaults.sh
-    # Set up python env
-    sh $HOME/.dotfiles/pkg/python/install.sh
-    # Install global npm
-    # source $(brew --prefix nvm)/nvm.sh
-    sh $HOME/.dotfiles/pkg/node/install.sh
-    # beautify vim ls terminal
-    sh $HOME/.dotfiles/os/beautify/install.sh
+    if [[ ${MODE} == "light" ]]; then
+        echo "macos: start .dotfile light installation"
+        # Set OS X defaults
+        sh $HOME/.dotfiles/os/macos/set-defaults.sh
+        # beautify vim ls terminal
+        sh $HOME/.dotfiles/os/beautify/install.sh
+        # Install homebrew packages (light mode)
+        sh $HOME/.dotfiles/os/macos/install.sh light
+    else
+        echo "macos: start .dotfile full installation"
+        # Install homebrew packages
+        sh $HOME/.dotfiles/os/macos/install.sh
+        # Set OS X defaults
+        sh $HOME/.dotfiles/os/macos/set-defaults.sh
+        # Set up python env
+        sh $HOME/.dotfiles/pkg/python/install.sh
+        # Install global npm
+        # source $(brew --prefix nvm)/nvm.sh
+        sh $HOME/.dotfiles/pkg/node/install.sh
+        # beautify vim ls terminal
+        sh $HOME/.dotfiles/os/beautify/install.sh
+    fi
 elif [[ ${__oo__lsb_dist} = "ubuntu" ]]
 then
     # Install apt-get packages

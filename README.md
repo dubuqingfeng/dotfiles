@@ -1,366 +1,284 @@
-# My dotfiles about MacOS， Ubuntu
+# dotfiles
 
-> The set of files used to describe session initialization procedures and store user customizations are commonly referred to as "dotfiles". These files can be used to customize screen appearance, shell behavior, program specifications and aspects of your Athena session. Most dotfiles are text files, although some exist in other formats. Dotfiles generally contain one command per line and are stored in your home directory. Dotfiles usually have names that begin with a period, hence the name dotfiles. You are given some dotfiles that are necessary for you to be able to login when you get your account.
+> Dotfiles for macOS and Ubuntu - configuration files that personalize your development environment
 
 ![iMac-MacBook-flat](http://i.imgur.com/GBpjrHB.png)
 
-这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles) 是基于 zoumo 的[dotfiles](https://github.com/zoumo/dotfiles)对自己的需求进行了修改。
+这份 [dotfiles](https://github.com/dubuqingfeng/dotfiles) 基于 [zoumo/dotfiles](https://github.com/zoumo/dotfiles) 并根据个人需求进行了定制和扩展。
 
-更多的 dotfiles 请参考 [GitHub does dotfiles](https://dotfiles.github.io/)。
+更多 dotfiles 参考: [GitHub does dotfiles](https://dotfiles.github.io/)
 
-# Agenda
+## 目录
 
-- [快速开始](#quick-start)
-  - [清除并安装](#erase-and-reinstall)
-  - [安装 Xcode](#install-xcode)
-  - [安装 dotfiles](#install-dotfiles)
-  - [恢复备份](#restore-backup)
-- [How To Use](#how-to-use)
-  - [dotfiles](#dotfiles)
-    - [Topical](#topical)
-    - [Components](#components)
-  - [MacOS](#MacOS)
-    - [Homebrew packages](#homebrewpackages)
-      - [Binaries](#binaries)
-      - [Fonts](#fonts)
-      - [Apps](#apps)
-    - [MacOS defaults setting](#MacOSdefaultssetting)
-  - [Mackup](#mackup)
-  - [alias](#alias)
-- [Issue](#issue)
-- [软件更新](#softupdate)
-- [Reference](#reference)
+- [快速开始](#快速开始)
+  - [系统准备](#系统准备)
+  - [安装 Xcode](#安装-xcode)
+  - [安装 dotfiles](#安装-dotfiles)
+  - [恢复备份](#恢复备份)
+  - [多设备管理](#多设备管理)
+  - [常见问题](#常见问题)
+- [使用指南](#使用指南)
+  - [dotfiles 说明](#dotfiles-说明)
+  - [macOS 配置](#macos-配置)
+  - [Mackup 备份](#mackup-备份)
+  - [自定义别名](#自定义别名)
+- [软件列表](#软件列表)
+  - [命令行工具](#命令行工具)
+  - [字体](#字体)
+  - [应用程序](#应用程序)
+- [已知问题](#已知问题)
+- [更新维护](#更新维护)
+- [参考资料](#参考资料)
 
-# Quick Start
+## 快速开始
 
-## Erase and reinstall 
+### 系统准备
 
-### Erase and reinstall MacOS
+如需从全新的 Mac 环境开始，参考 [OS X: 如何清除并安装](http://support.apple.com/zh-tw/HT5943)：
 
-如果打算从干净的 Mac 环境开始，请参考「[OS X：如何清除並安裝](http://support.apple.com/zh-tw/HT5943)」。
+1. 登出 iCloud 和 iMessage
+2. 进入恢复模式：
+   - **Apple Silicon (M1/M2/M3等)**: 关机后长按电源键，直到看到"正在载入启动选项"
+   - **Intel Mac**: 重启时按住 Command + R
+3. 使用磁盘工具抹掉硬盘
+4. 重新安装 macOS
 
-1. 登出 iCloud
-2. 登出 iMessage
-3. 重置 NVRAM 抹掉硬盘驱动器
-4. 打开实用工具，终端，输入以下指令：
+**关于安全擦除：**
+- **Apple Silicon Mac**: 使用 APFS 加密卷宗，直接抹掉即可安全删除数据，无需额外擦除
+- **Intel Mac (HDD)**: 可选择安全擦除空闲空间
 
 ```bash
-diskutil secureErase freespace VALUE /Volumes/DRIVE (DRIVE example： Macintosh\ HD，Macintosh\ HD 数据)
+# Intel Mac HDD 安全擦除命令（仅在必要时使用）
+diskutil secureErase freespace VALUE /Volumes/DRIVE
+
+# VALUE 说明：
+# 0: 单次覆写 0
+# 1: 单次随机数覆写
+# 2: 7 次覆写
+# 3: 35 次覆写
+# 4: 3 次覆写
 ```
 
-Value 在 0-4 之间，0 表示全盘覆盖写入单次 0，1 表示全盘覆盖写入随机数字，2 表示全盘覆盖擦除 7 次，3 表示全盘覆盖擦除 35 次，4 表示全盘覆盖擦除 3 次。需要注意的是，SSD 擦除太多次会影响到它的使用寿命。
+注意：SSD（固态硬盘）不建议频繁擦除，会缩短使用寿命。现代 Mac 基本都使用 SSD，直接抹掉即可。
 
-5. 重新安装 macOS
+### 安装 Xcode
 
-## Install Xcode
-
-1. 更新系统和 APP store
-2. 安装 Xcode
+1. 更新系统至最新版本
+2. 从 App Store 安装 Xcode
 3. 安装 Xcode Command Line Tools
 
-// 输入gcc或者git，会提示
-```
-xcode-select:no developer tools were found at '/Applications/Xcode.app',requesting install. 
-Choose an option in the dialog to download the command Line developer tools.
+```bash
+# 方式 1: 命令行安装（推荐）
+xcode-select --install
+
+# 方式 2: 输入 gcc 或 git 会自动提示安装
 ```
 
-然后执行 (m1 芯片或许不需要)：
+### 安装 dotfiles
+
+克隆仓库到 `~/.dotfiles` 目录：
 
 ```bash
-$ xcode-select --install
+git clone https://github.com/dubuqingfeng/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./script/bootstrap
 ```
 
-## Install dotfiles
+`bootstrap` 脚本会自动完成以下工作：
 
-使用 git clone 一份到 `$HOME` 目录底下的 `.dotfiles` 文件夹里面:
+1. 检查并安装 [Homebrew](http://brew.sh/)
+2. 检查并安装 [Oh My Zsh](https://ohmyz.sh/)
+3. 链接 dotfiles (`.zshrc`, `.vimrc`, `.gitconfig`, `.gitignore` 等)
+4. 安装 Homebrew packages (binaries, fonts, apps)
+5. 配置 macOS 系统默认设置
+6. 安装 Python packages (powerline-status, pyenv 等)
+7. 美化 vim、ls、terminal (Solarized 配色 + Powerline 状态栏)
+
+安装完成后，需要配置 Homebrew 环境变量：
 
 ```bash
-$ git clone https://github.com/dubuqingfeng/dotfiles.git ~/.dotfiles
-```
-
-进入 `.dotfiles` 文件夹, 然后安装dotfiles:
-
-```bash
-$ cd ~/.dotfiles
-$ ./script/bootstrap
-```
-
-`bootstrap.sh` 这个程序会自动完成以下的工作:
-
-1. 检查并安装 [Homebrew](http://brew.sh/)。
-2. 检查并安装 [Oh My Zsh](http://ohmyz.sh/)。
-3. 检查并链接 dotfiles(`.zshrc`, `.vimrc`, `.gitconfig`,` .gitignore`, ...)。
-4. 更新并安装 brew packages(binaries, fonts, apps)。
-5. 设置 Mac OS 的 defaults settings。
-6. 安装python packages(powerline-status, pyenv, ...)
-7. 对 vim, ls, terminal 进行美化, 主要是安装了 solarized 配色和 powerline 状态栏
-
-```
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-### Bootstrap Muilt Devices
+### 恢复备份
 
-现在可能不止有一个 mac，如何管理多台设备的软件安装配置？
+使用 [Mackup](https://github.com/lra/mackup) 恢复应用程序配置：
 
-### Bootstrap Question
-
-问题1:
-
-这里如果出现 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused, 建议配置代理
-
-问题2:
-
-```
-/Users/dubuqingfeng/.zshenv:.:2: no such file or directory: /Users/dubuqingfeng/.cargo/env
+```bash
+mackup restore
 ```
 
-没有安装 rust，建议通过以下命令安装：
+### 多设备管理
+
+管理多台设备的配置建议：
+
+1. 为不同设备创建分支或使用条件配置
+2. 使用 Mackup 同步应用程序配置
+3. 在 `.gitignore` 中排除设备特定的配置文件
+
+### 常见问题
+
+**问题 1: 连接 raw.githubusercontent.com 失败**
 
 ```
+curl: (7) Failed to connect to raw.githubusercontent.com port 443
+```
+
+解决方法：配置网络代理或修改 hosts 文件
+
+**问题 2: Cargo 环境未找到**
+
+```
+.zshenv:.:2: no such file or directory: ~/.cargo/env
+```
+
+解决方法：安装 Rust 工具链
+
+```bash
+# 方式 1: 使用 Homebrew
 brew install rustup
 rustup-init
 
-或者：
-
+# 方式 2: 官方安装脚本
 curl https://sh.rustup.rs -sSf | sh -s -- --no-modify-path -y
 ```
 
-## Restore backup
+## 使用指南
 
-使用 [Mackup](https://github.com/lra/mackup) 进行备份恢复:
+### dotfiles 说明
+
+执行 `script/bootstrap` 时，脚本会将所有 `*.symlink` 文件链接到 `$HOME` 目录：
+
+| Topic | *.symlink | Link Path |
+|-------|-----------|-----------|
+| vim   | vimrc.symlink | ~/.vimrc |
+| zsh   | zshrc.symlink | ~/.zshrc |
+| git   | gitconfig.symlink | ~/.gitconfig |
+
+#### 目录结构
+
+采用主题化的目录结构，每个环境配置独立存放：
+
+- **bin/**: 可执行脚本，会自动添加到 PATH
+- **topic/*.zsh**: shell 启动时自动加载
+- **topic/path.zsh**: 优先加载的路径配置
+- **topic/*.symlink**: 自动链接到 `$HOME` 目录
+
+### macOS 配置
+
+`bin/dot` 在 `script/bootstrap` 最后执行，负责安装软件和配置系统。
+
+**使用方式：**
 
 ```bash
-$ mackup restore
+# 完整安装（默认）- 包含所有软件包和开发环境
+dot
+
+# 轻量安装 - 跳过 Python 和 Node.js 环境配置，只安装必要软件
+dot light
 ```
 
-# How To Use
+**完整安装执行流程：**
 
-## dotfiles
+1. `os/macos/install.sh` - 安装 Homebrew packages
+2. `os/macos/set-defaults.sh` - 配置 macOS 系统设置
+3. `pkg/python/install.sh` - 配置 Python 环境
+4. `pkg/node/install.sh` - 配置 Node.js 环境
+5. `os/beautify/install.sh` - 美化终端环境
 
-执行 `~/.dotfiles/script/bootstrap` 的时候，脚本会将目录底下所有的 `*.symlink` 文件通过 `ln` 命令建立链接至 `$HOME` 目录底下:
+**轻量安装执行流程：**
 
-| topic  | *.symlink          | .dotfiles     |
-| ------ | ------------------ | ------------- |
-| vim    | vimrc.symlink      | ~/.vimrc      |
-| zsh    | zshrc.symlink      | ~/.zshrc      |
+1. `os/macos/set-defaults.sh` - 配置 macOS 系统设置
+2. `os/beautify/install.sh` - 美化终端环境
+3. `os/macos/install.sh light` - 安装必要的 Homebrew packages
 
-### Topical
+#### Homebrew packages
 
-每一个环境的配置是以文件夹的形式独立区分, 例如, 如果想要增加"Python"的配置到dotfiles, 则简单的新增一个名字为 `python` 的文件夹
-任何后缀名是 `.zsh` 的文件将在 shell 执行时自动被载入环境中。
-任何后缀名是 `.symlink` 的文件将在你执行 `script/bootstrap`的时候自动链接到 `$HOME` 目录下
-
-### Components
-
-目录中比较特殊的文件
-
-- **bin/**: 任何在 `bin/` 目录下的文件可以在shell执行的时候使用。
-- **topic/*.zsh**: 任何 `.zsh` 结尾的文件都会在 shell 执行的时候被载入环境。
-- **topic/path.zsh**: 任何 `path.zsh` 结尾的文件会在 shell 执行时优先载入。
-- **topic/*.symlink**: 任何 `*.symlink` 結尾的文件都会在 `$HOME` 目录下建立链接。
-
-不同于 [Holman's dotfiles](https://github.com/holman/dotfiles)，修改了一些部分:
-
-- Shell 的部分改用 [Oh My Zsh](http://ohmyz.sh/)取代原作者自己配置的 zsh。
-- 移除 **topic/aliases.zsh**、**topic/completion.zsh** 等文件，改用 Oh My Zsh 的 [plugins]。(https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins) 代替。
-- 移除 **zsh/prompt.zsh**、**zsh/window.zsh** 等文件，改用 Oh My Zsh 的 [themes]。(https://github.com/robbyrussell/oh-my-zsh/wiki/Themes) 代替。
-- dotfiles 只專注在 **topic/*.symlink**、**topic/path.zsh** 的配置。
-
-
-## MacOS
-
-`bin/dot` 会在`script/bootstrap`最后执行, 负责安装 MacOS 的程序和修改系统配置
-
-执行 `$ dot` 之后，它会执行下面的脚本:
-
-1. `$HOME/.dotfiles/os/macos/install.sh` - Homebrew packages
-2. `$HOME/.dotfiles/os/macos/set-defaults.sh` - MacOS defaults setting
-3. `$HOME/.dotfiles/pkg/python/install.sh`   - Set up python env
-4. `$HOME/.dotfiles/os/beautify/install.sh` - beautify vim, terminal, ls
-
-### Homebrew packages
-
-执行 `$ $HOME/.dotfiles/os/macos/install.sh` 的时候, 脚本会使用 [Homebrew](http://brew.sh/) 來安裝 **binary**、**font** 還有 **app**，可以根据个人的需求增减packages的安装:
+在 `os/macos/install.sh` 中自定义需要安装的软件包：
 
 ```bash
+# 命令行工具
 binaries=(
   git
   tree
+  wget
   ...
 )
-```
 
-字体都是以 **font-XXX** 的形式命名，可以用 `$ brew search /font-XXX/` 搜索是否存在。
-
-```bash
+# 字体 (格式: font-XXX)
 fonts=(
-  font-roboto
+  font-source-code-pro
   ...
 )
-```
 
-应用程序可以用 `$ brew search XXX` 或是 [Homebrew](http://brew.sh/) 网站搜索是否存在。
-
-```bash
+# 应用程序
 apps=(
   iterm2
   google-chrome
+  visual-studio-code
   ...
 )
 ```
 
-以下是我目前自动安裝的 packages：
+#### macOS 系统设置
 
-#### Binaries
+`os/macos/set-defaults.sh` 会修改系统默认设置，可根据需求自定义。
 
-| name | info |
-| --- | --- |
-| dos2unix | 文档格式转换 |
-| wget | wget工具 |
-| python | MacOS 自带的python没有pip |
-| ctags | 方便代码阅读 |
-| [grc](http://kassiopeia.juls.savba.sk/~garabik/software/grc/README.txt)| log上色 |
-| [git-flow](https://github.com/nvie/gitflow) | Git branch manage model |
-| [tree](http://mama.indstate.edu/users/ice/tree/) | 树状目录结构显示 |
-| [mackup](https://github.com/lra/mackup) | 同步应用程序配置 |
-| [z](https://github.com/rupa/z.git) | autojump |
-| tmux | tmux |
-| htop | 加强版top |
-| [trash](http://hasseg.org/blog/post/406/trash-files-from-the-os-x-command-line/) | 模拟Finder的移到废纸篓功能, 在alias中对rm进行替换, 进行安全删除 |
-| proxychains-ng | 代理工具 |
-| pyenv | pyenv |
-| gettext | gettext |
-| netcat | netcat |
-| gdb | gdb |
-| homebrew/versions/gcc48 | homebrew/versions/gcc48 |
+主要配置项：
 
-#### Fonts
+- **性能优化**
+  - 加快窗口 resize 速度
+  - 加速进入睡眠模式
+  - 关闭不必要的动画效果
 
-| name | info |
-| --- | --- |
-| [font-source-code-pro](http://www.google.com/fonts/specimen/Source+Code+Pro) | Source Code Pro |
+- **触控板/鼠标**
+  - 开启轻触点击
+  - 开启三指拖拽
+  - 开启右键菜单
+  - 提高移动速度
 
-#### Apps
+- **键盘**
+  - 开启全键盘控制
+  - 加快按键重复速度
+  - 关闭按键长按限制
 
-| name | info |
-| --- | --- |
-| java | java |
-| [google-chrome](www.google.com/chrome) | Google 浏览器 |
-| [iterm2](https://www.iterm2.com/) | iterm2加强版终端 |
-| Firefox | 火狐浏览器 |
-| [scroll-reverser](http://pilotmoon.com/scrollreverser/) | 支持鼠标和触控板滚轮分别设置 |
-| the-unarchiver | 优秀免费的解压软件 |
-| android-studio | Android开发 |
-| robomongo | mongodb client |
-| pycharm-ce | 社区版pycharm |
-| evernote | 印象笔记 |
-| sublime-text3 | 一种编辑器 |
-| xmind | 一种思维导图软件 |
-| licecap | 一种录屏软件 |
-| appcleaner | app卸载软件 |
-| grandperspective | grandperspective # 磁盘空间分析软件 |
-| mactex | mac LaTeX（比较大一点） |
-| intel-haxm | intel-haxm |
-| wireshark --with-qt | wireshark --with-qt |
-| intellij-idea | intellij-idea |
-| charles | 抓包软件 |
-| android-file-transfer | Android手机传输工具 |
-| nutstore | 坚果云 |
+- **Finder**
+  - 显示隐藏文件
+  - 显示文件扩展名
+  - 显示状态栏和路径栏
+  - 允许文本选择
+  - 设置默认搜索范围
+  - 使用列视图
 
-下面这些不太适合自动安装, 有些比较大, 有些可以不装
+- **Dock**
+  - 窗口最小化到应用图标
+  - 自动隐藏/显示
+  - 半透明显示隐藏应用
 
-#### Binaries
+更多配置参考: [Mathias's dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.macos)
 
-| name | info |
-| --- | --- |
-| mysql | 数据库 |
-| mongodb | 数据库 |
-| nginx | 反向代理 |
+### Mackup 备份
 
-#### Apps
+[Mackup](https://github.com/lra/mackup) 用于备份和同步应用程序配置到云端。
 
-| name | info |
-| --- | --- |
-| dash | dash |
-| [sourcetree](https://www.sourcetreeapp.com/) | git client |
-| beyond-compare | beyond-compare 一个优秀的文件/目录对比工具 |
-| virtualbox | virtualbox 虚拟机 |
-| jdk1.6 | android 编译 |
+**工作原理：**
+将配置文件移动到云盘同步目录（如 `~/Dropbox/Mackup`），然后创建符号链接。
 
-
-### MacOS defaults setting
-
-执行 `$ ./os/macos/set-defaults.sh` 之后，程序会更改 Mac OS 的一些系统设置, 根据个人喜欢和需求修改这个文件，或是参考 [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles/blob/master/.osx) 整理好的配置。
-
-以下是目前设定的配置：
-
-
-| setting | script |
-| ------ | --- |
-| 关闭电源进入深度睡眠 | `sudo pmset -a autopoweroff 0` |
-| 加快窗口 resize 的速度(Cocoa applications)  | `defaults write NSGlobalDomain NSWindowResizeTime -float 0.001` |
-| 预设展开存储窗口(1) | `defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true` |
-| 预设展开存储窗口(2) | `defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true` |
-| 关闭“你确定要开启这个应用程序?"的询问窗口 | `defaults write com.apple.LaunchServices LSQuarantine -bool false` |
-| 加速进入睡眠模式 | `sudo pmset -a hibernatemode 0` |
-| 开启触控板轻触点击功能(1) | `defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true` |
-| 开启触控板轻触点击功能(2) | `defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1` |
-| 开启触控板轻触点击功能(3) | `defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1` |
-| 开启触控板/滑鼠右键菜单功能(1) | `defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true` |
-| 开启触控板/滑鼠右键菜单功能(2) | `defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode "TwoButton"` |
-| 开启触控板三指拖拽功能(1) | `defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -bool true` |
-| 开启触控板三指拖拽功能(2) | `defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true` |
-| 开启触控板四指下滑出现 app expose 功能(1) | `defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerVertSwipeGesture -int 0` |
-| 开启触控板四指下滑出现 app expose 功能(2) | `defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 0` |
-| 开启触控板四指下滑出现 app expose 功能(3) | `defaults write com.apple.dock showAppExposeGestureEnabled -int 1` |
-| 加快触控板/滑鼠的速度(1) | `defaults write NSGlobalDomain com.apple.trackpad.scaling -int 3` |
-| 加快触控板/滑鼠的速度(2) | `defaults write NSGlobalDomain com.apple.mouse.scaling -int 3`  |
-| 开启全部窗口組件支持键盘控制 | `defaults write NSGlobalDomain AppleKeyboardUIMode -int 3` |
-| 关闭键盘按住的输入限制 | `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false` |
-| 加快键盘输入 | `defaults write NSGlobalDomain KeyRepeat -int 0` |
-| 移除窗口截图的影子移除視窗截圖的影子 | `defaults write com.apple.screencapture disable-shadow -bool true` |
-| 显示隐藏文件 | `defaults write ~/Library/Preferences/com.apple.finder AppleShowAllFiles -bool true`  |
-| 预设Finder起始位置为下载(1) | `defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true` |
-| 预设Finder起始位置为下载(2) | `defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true` |
-| 显示所有拓展名 | `defaults write NSGlobalDomain AppleShowAllExtensions -bool true` |
-| 显示 Finder 状态栏 | `defaults write com.apple.finder ShowStatusBar -bool true` |
-| 显示 Finder 路径栏 | `defaults write com.apple.finder ShowPathbar -bool true` |
-| 允许框选 Finder Quick Look 的文字 | `defaults write com.apple.finder QLEnableTextSelection -bool true` |
-| 预设搜索的结果默认为当前的目录下 | `defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"` |
-| 关闭更改拓展名的警告提示 | `defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false` |
-| 开启资料夹的 spring loading 功能 | `defaults write NSGlobalDomain com.apple.springing.enabled -bool true` |
-| 开启 Dock 的 spring loading 功能 | `defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true` |
-| 移除 spring loading 的延迟 | `defaults write NSGlobalDomain com.apple.springing.delay -float 0` |
-| 避免在 network volumes 底下建立 .DS_Store 档案 | `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true` |
-| 使用 column view 作为 Finder 预设显示选项 | `defaults write com.apple.finder FXPreferredViewStyle -string "clmv"` |
-| 将窗口最小化到应用程序图标 | `defaults write com.apple.dock minimize-to-application -bool true` |
-| 在 Dock 中为打开的应用程序显示指示灯 | `defaults write com.apple.dock show-process-indicators -bool true` |
-| 关闭 Dashboard | `defaults write com.apple.dashboard mcx-disabled -bool true` |
-| 将 Dashboard 从多重桌面之中移除 | `defaults write com.apple.dock dashboard-in-overlay -bool true` | 
-| 自动显示和隐藏dock | `defaults write com.apple.dock autohide -bool true` |
-| 将隐藏的应用程序 Dock 图标用半透明显示 | `defaults write com.apple.dock showhidden -bool true` 
-
-## Mackup
-
-当初始环境都安装好了以后, 就是需要备份了。除了 `.zsrc`、`.vimrc` 这类 dotfile 比较适合放置 Github 上面之外，其他像是 Sublime 的 plugin、iTerm2 的 setting、Oh My Zsh 的 plugin、等等很多一般程序的配置需要备份, 这些不适合放在Github上面。所以这里介紹 [Mackup](https://github.com/lra/mackup) 
-
-**它将你想要备份的文件转移到 Dropbox ,Google Drive, 百度云这样的云盘在本地的同步目录如 `~/dropbox/mackup`, 然后使用`ln -s`进行链接 `link -> ~/dropbox/mackup`**
-
-install
+**安装：**
 
 ```bash
-$ brew install mackup
+brew install mackup
 ```
 
-配置方式也很容易，建立一份 `~/.mackup.cfg` 來修改:
+**配置：**
 
-```bash
+创建 `~/.mackup.cfg` 文件：
+
+```ini
 [storage]
-engine = dropbox # 同步的云盘, 目前只有dropbox和google_drive可以选择
-directory = Mackup # 同步的文件夹，这里会将所有的同步备份至 ~/Dropbox/Mackup 底下
+engine = dropbox          # 支持 dropbox, google_drive, icloud
+directory = Mackup        # 同步目录名称
 
-# 指定要同步的应用程序
 [applications_to_sync]
 iterm2
 oh-my-zsh
@@ -368,113 +286,208 @@ sublime-text-3
 ssh
 
 [applications_to_ignore]
-# 指定不想同步的应用程序
+# 不想同步的应用
 ```
 
-还可以在 `~/.mackup`文件夹中添加自定义程序同步配置(注意, 如果自定义的配置与默认支持的程序同名, 会覆盖默认配置)
+**自定义应用配置：**
+
+在 `~/.mackup/` 目录下创建配置文件（会覆盖默认配置）：
 
 ```bash
-$ vim ~/.mackup/sublime-text-3.cfg
+# ~/.mackup/sublime-text-3.cfg
 [application]
 name = Sublime Text 3
 
 [configuration_files]
-# Based on https://packagecontrol.io/docs/syncing
 Library/Application Support/Sublime Text 3/Packages
 Library/Application Support/Sublime Text 3/Installed Packages
 .config/sublime-text-3/Packages/User
 ```
 
-进行备份, 以后的任意修改都会被同步到云端
+**使用：**
 
 ```bash
-$ mackup backup
+# 备份配置
+mackup backup
+
+# 恢复配置
+mackup restore
+
+# 取消同步
+mackup uninstall
 ```
 
-就可以将文件备份到 Dropbox 或 Google Drive。需要恢复的适合则执行:
+**支持的应用：**
+
+| 应用 | 备份内容 |
+|------|---------|
+| git | `.gitconfig`, `.config/git/ignore` |
+| iterm2 | 所有设置 |
+| oh-my-zsh | `~/.oh-my-zsh` |
+| sublime-text-3 | 插件和配置 |
+| pycharm | 配置 |
+| vim | `.vimrc`, `.vim` |
+
+更多支持的应用: [Mackup 文档](https://github.com/lra/mackup/tree/master/doc)
+
+### 自定义别名
+
+在对应的 topic 目录下创建 `.zsh` 文件定义别名：
 
 ```bash
-$ mackup restore
-```
-
-以下是目前备份的应用程序：
-
-
-| app | backup-conf |
-| --- | --- |
-| git | ~/.gitconfig和.config/git/ignore |
-| mackup | ~/.mackup.cfg和~/.mackup |
-| iterm2 | 默认配置 |
-| oh-my-zsh | ~/.oh-my-zsh |
-| scroll-reverser | 默认配置 |
-| sublime-text-3 | plugins和config |
-| pycharm40 | config |
-| vim | ~/.vimrc 和~/.vim |
-
-更多详细的配置说明和支持软件请查看 [mackup 的文件](https://github.com/lra/mackup/tree/master/doc)。
-
-## alias
-
-由于个人习惯需要对一些命令进行alias, 如下
-
-```bash
+# 文件格式转换
 alias dos2mac="dos2unix -c mac"
 alias gbk2utf8="iconv -f GBK -t UTF-8"
 alias utf82gbk="iconv -f UTF-8 -t GBK"
+
+# 常用命令
 alias tailf="tail -f"
 alias ve="pyenv local"
-alias rm="trash" # 这个需要brew install trash
+
+# 安全删除（需要先 brew install trash）
+alias rm="trash"
 ```
 
-# Issue
+## 软件列表
 
-需要手动安装以及有一些brew cask安装不上的app
+### 命令行工具
 
-| name | 说明 |
-| --- | --- |
-| beyond-compare | 兼容问题 |
-| postman | chrome-extendsion |
-| sequel-pro | mysql client |
-| sourcetree | git客户端 |
+| 工具 | 说明 |
+|------|------|
+| dos2unix | 文本格式转换 |
+| wget | 文件下载工具 |
+| curl | HTTP 客户端 |
+| python | Python 解释器（含 pip） |
+| ctags | 代码标签生成器 |
+| [grc](http://kassiopeia.juls.savba.sk/~garabik/software/grc/README.txt) | 日志着色工具 |
+| [git-flow](https://github.com/nvie/gitflow) | Git 分支管理模型 |
+| [tree](http://mama.indstate.edu/users/ice/tree/) | 目录树显示 |
+| [mackup](https://github.com/lra/mackup) | 应用配置同步 |
+| [z](https://github.com/rupa/z) | 智能目录跳转 |
+| tmux | 终端多路复用器 |
+| htop | 系统监控工具 |
+| [trash](http://hasseg.org/blog/post/406/trash-files-from-the-os-x-command-line/) | 安全删除文件 |
+| proxychains-ng | 代理工具 |
+| pyenv | Python 版本管理 |
+| rustup | Rust 工具链 |
+| jq | JSON 处理工具 |
+| ripgrep | 快速文本搜索 |
+| fd | 快速文件查找 |
+| bat | cat 的增强版 |
+| exa | ls 的现代化替代 |
 
-以及一些Chrome 扩展或者应用：
+### 字体
 
-| name | info |
-| --- | --- |
-| [SwitchyOmega](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN) |  |
-| [FireShot](https://chrome.google.com/webstore/detail/capture-webpage-screensho/mcbpblocgmgfnpjjppndjkmgjaogfceg?hl=zh-CN) |  |
-| [cVim](https://chrome.google.com/webstore/detail/cvim/dbepggeogbaibhgnhhndojpepiihcmeb) |  |
-| [Octotree](https://chrome.google.com/webstore/detail/octotree/ihlenndgcmojhcghmfjfneahoeklbjjh) |  |
-| [Save to Pocket](https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj) |  |
-| [Tab Resize - split screen layouts](https://chrome.google.com/webstore/detail/tab-resize-split-screen-l/bkpenclhmiealbebdopglffmfdiilejc) |  |
-| [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa) | |
-| [One-Click Extensions Manager](https://chrome.google.com/webstore/detail/%E4%B8%80%E9%94%AE%E7%AE%A1%E7%90%86%E6%89%80%E6%9C%89%E6%89%A9%E5%B1%95/niemebbfnfbjfojajlmnbiikmcpjkkja) |  |
-| Apps | --- |
-| [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) | |
-| [Simple Docker UI](https://chrome.google.com/webstore/detail/simple-docker-ui/jfaelnolkgonnjdlkfokjadedkacbnib?hl=zh-CN) | |
-| [MySQL Admin](https://chrome.google.com/webstore/detail/chrome-mysql-admin/ndgnpnpakfcdjmpgmcaknimfgcldechn) | |
-| [WorkFlowy](https://chrome.google.com/webstore/detail/workflowy/koegeopamaoljbmhnfjbclbocehhgmkm/related?hl=zh-CN) | |
+| 字体 | 说明 |
+|------|------|
+| [font-source-code-pro](https://fonts.google.com/specimen/Source+Code+Pro) | Adobe 开源等宽字体 |
+| font-fira-code | 带连字的编程字体 |
 
-还有一些压根装不上的
+### 应用程序
 
-| name | 说明 |
-| --- | --- |
-| [qlcolorcode](https://code.google.com/p/qlcolorcode/) | 让 Quick Look 支持 syntax highlighting |
-| [qlmarkdown](https://github.com/toland/qlmarkdown) | 让 Quick Look 支持 Markdown |
-| [qlstephen](http://whomwah.github.io/qlstephen/) | 让 Quick Look 支持无后拓展名的纯文本 |
-| [font-roboto](http://www.google.com/fonts/specimen/Roboto) | Roboto字体 |
+#### 开发工具
 
-# 软件更新
+| 应用 | 说明 |
+|------|------|
+| [iterm2](https://iterm2.com/) | 终端增强工具 |
+| [visual-studio-code](https://code.visualstudio.com/) | 代码编辑器 |
+| [zed](https://zed.dev/) | 高性能现代化代码编辑器 |
+| [sublime-text](https://www.sublimetext.com/) | 文本编辑器 |
+| [docker](https://www.docker.com/) | 容器平台 |
 
+#### 浏览器
+
+| 应用 | 说明 |
+|------|------|
+| [google-chrome](https://www.google.com/chrome) | Chrome 浏览器 |
+| firefox | Firefox 浏览器 |
+
+#### 实用工具
+
+| 应用 | 说明 |
+|------|------|
+| [scroll-reverser](https://pilotmoon.com/scrollreverser/) | 鼠标/触控板滚动方向分离 |
+| the-unarchiver | 解压缩工具 |
+| appcleaner | 应用卸载工具 |
+| [charles](https://www.charlesproxy.com/) | HTTP 抓包工具 |
+| nutstore | 坚果云网盘 |
+
+#### 其他应用
+
+| 应用 | 说明 |
+|------|------|
+| xmind | 思维导图 |
+| licecap | GIF 录屏工具 |
+| grandperspective | 磁盘空间分析 |
+| wireshark | 网络协议分析 |
+
+#### 可选安装（较大或按需安装）
+
+| 应用 | 说明 |
+|------|------|
+| mysql | MySQL 数据库 |
+| mongodb | MongoDB 数据库 |
+| nginx | Web 服务器 |
+| postgresql | PostgreSQL 数据库 |
+| redis | Redis 缓存 |
+| virtualbox | 虚拟机 |
+| dash | API 文档浏览器 |
+| [sourcetree](https://www.sourcetreeapp.com/) | Git 客户端 |
+| beyond-compare | 文件对比工具 |
+
+## 已知问题
+
+### Chrome 扩展推荐
+
+| 扩展 | 用途 |
+|------|------|
+| [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) | Vim 风格键盘导航 |
+| [MetaSuites - Builders' Swiss Army Knife](https://chrome.google.com/webstore/detail/metasuites/aobdjndhikmgjnkihifjdfkekjobcnja) | 开发者工具集合 |
+| [Octotree](https://chrome.google.com/webstore/detail/octotree/ihlenndgcmojhcghmfjfneahoeklbjjh) | GitHub 代码树 |
+| [Markdown Here](https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa) | Markdown 渲染 |
+| [JSONView](https://chrome.google.com/webstore/detail/jsonview/) | JSON 格式化 |
+
+## 更新维护
+
+### 更新 Homebrew 软件
+
+```bash
+# 更新 Homebrew 本身
+brew update
+
+# 升级所有软件包
+brew upgrade
+
+# 升级指定软件包
+brew upgrade <package>
+
+# 重新安装软件包
+brew reinstall <package>
+
+# 清理旧版本
+brew cleanup
 ```
-brew upgrade xxx
-brew restall xxx
+
+### 更新 dotfiles
+
+```bash
+cd ~/.dotfiles
+git pull origin master
+./script/bootstrap
 ```
 
-# Reference
+## 参考资料
 
 - [First steps with Mac OS X as a Developer](http://carlosbecker.com/posts/first-steps-with-mac-os-x-as-a-developer/)
-- [如何優雅地在 Mac 上使用 dotfiles?](http://segmentfault.com/a/1190000002713879)
-- [osx-for-hackers.sh](https://gist.github.com/brandonb927/3195465)
-- [Mackup](https://github.com/lra/mackup/tree/master/doc)
-- [mac-dev-setup](https://github.com/zoumo/mac-dev-setup)
+- [如何优雅地在 Mac 上使用 dotfiles?](https://segmentfault.com/a/1190000002713879)
+- [Awesome Dotfiles](https://github.com/webpro/awesome-dotfiles)
+- [GitHub does dotfiles](https://dotfiles.github.io/)
+- [Holman's dotfiles](https://github.com/holman/dotfiles)
+- [Mathias's dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [Mackup Documentation](https://github.com/lra/mackup/tree/master/doc)
+- [Oh My Zsh](https://ohmyz.sh/)
+- [Homebrew](https://brew.sh/)
+
+## License
+
+MIT License

@@ -35,7 +35,7 @@ install_homebrew () {
   if test ! $(which brew)
   then
     echo "Installing Homebrew for you..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 }
 
@@ -62,18 +62,9 @@ install_ohmyzsh
 install_dotfiles
 
 install_dot () {
-  # 完整安装
-  if source bin/dot
-  then
-   success "dependencies installed"
-  else
-   fail "error installing dependencies"
-  fi
-}
-
-install_light_dot () {
-  # 轻量化安装，用于非主力电脑
-  if source bin/light
+  local mode=${1:-""}
+  # 完整安装或轻量化安装
+  if sh bin/dot ${mode}
   then
    success "dependencies installed"
   else
@@ -86,11 +77,9 @@ then
     echo "macos: start .dotfile bootstraps"
     install_homebrew
     info "installing dependencies"
-    read -p "please input the mode(example: light, normal): " mode
-    if [[ ${mode} == "normal" ]]; then
-      install_dot
-    elif [[ ${mode} == "light" ]]; then
-      install_light_dot
+    read -p "please input the mode(full/light, default: full): " mode
+    if [[ ${mode} == "light" ]]; then
+      install_dot light
     else
       install_dot
     fi
