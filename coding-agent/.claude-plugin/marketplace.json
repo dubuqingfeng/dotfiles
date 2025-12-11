@@ -1,0 +1,34 @@
+{
+  "name": "dotfiles",
+  "description": "Claude Code plugin marketplace featuring specialized agents and workflow automation",
+  "owner": {
+    "name": "dubuqingfeng",
+    "url": "https://dubuqingfeng.xyz"
+  },
+  "plugins": [
+    {
+      "name": "git",
+      "source": "./coding-agent/dist/claude/plugins/git",
+      "description": "Conventional Git and GitFlow automation.",
+      "category": "development"
+    },
+    {
+      "name": "github",
+      "source": "./coding-agent/dist/claude/plugins/github",
+      "description": "GitHub project operations with quality gates.",
+      "category": "productivity"
+    },
+    {
+      "name": "review",
+      "source": "./coding-agent/dist/claude/plugins/review",
+      "description": "Multi-agent review system for enforcing high quality.",
+      "category": "productivity"
+    },
+    {
+      "name": "utils",
+      "source": "./coding-agent/dist/claude/plugins/utils",
+      "description": "Utility commands for day-to-day automation.",
+      "category": "productivity"
+    }
+  ]
+}
