@@ -21,9 +21,14 @@ light_binaries=(
   fzf
   htop
   svn
-  trash
+  rmtrash
   wget
   zellij
+  # nvm
+  # go
+  # python
+  # python@3.14
+  # uv
 )
 
 # Apps
@@ -86,7 +91,7 @@ binaries=(
   z
   tmux
   htop
-  trash
+  rmtrash
   proxychains-ng
   pyenv
   gettext

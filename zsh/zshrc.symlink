@@ -55,9 +55,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # zsh-autocomplete dacs
 
 if [[ -n $DACS ]]; then
-  plugins=(z extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
+  plugins=(z vscode extract zsh-autosuggestions zsh-syntax-highlighting zsh-completions)
 else
-  plugins=(z extract zsh-autocomplete zsh-syntax-highlighting zsh-completions)
+  plugins=(z vscode extract zsh-autocomplete zsh-syntax-highlighting zsh-completions)
 fi
 
 # User configuration
@@ -140,14 +140,9 @@ if [ -d "$DOTFILES" ];
 fi
 
 export BAT_THEME="Coldark-Dark"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 # . "$HOME/.local/bin/env"
 # export PATH="$HOME/.local/bin:$PATH"
-# node / nvm
-# export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # java
 # export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
