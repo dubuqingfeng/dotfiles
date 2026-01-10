@@ -148,3 +148,13 @@ export BAT_THEME="Coldark-Dark"
 
 # ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 # source /Users/dubuqingfeng/.dacs_run_profile
+
+# opencode
+export PATH=/Users/dubuqingfeng/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/dubuqingfeng/.bun/_bun" ] && source "/Users/dubuqingfeng/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
