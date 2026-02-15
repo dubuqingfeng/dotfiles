@@ -159,8 +159,6 @@ export PATH=/Users/dubuqingfeng/.opencode/bin:$PATH
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# OpenClaw Completion
-source <(openclaw completion --shell zsh)
 
 # pnpm
 export PNPM_HOME="/Users/dubuqingfeng/Library/pnpm"
@@ -169,3 +167,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# OpenClaw Completion
+source "/Users/dubuqingfeng/.openclaw/completions/openclaw.zsh"
+
+# Created by `pipx` on 2026-02-15 10:44:04
+export PATH="$PATH:/Users/dubuqingfeng/.local/bin"

@@ -1,2 +1,4 @@
 *.swp
 pkg/cursor-cli.zsh
+node_modules
+.DS_Store

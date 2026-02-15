@@ -1,0 +1,12 @@
+{
+  "name": "evm-skills",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "evm": "node scripts/evm.mjs",
+    "check": "node --check scripts/evm.mjs && node --check scripts/rpcs.mjs && node --check scripts/utils.mjs"
+  },
+  "dependencies": {
+    "viem": "^2.21.0"
+  }
+}
