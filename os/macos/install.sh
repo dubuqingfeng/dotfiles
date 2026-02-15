@@ -24,6 +24,7 @@ light_binaries=(
   rmtrash
   wget
   zellij
+  pnpm
   # nvm
   # go
   # python
@@ -139,7 +140,7 @@ binaries=(
   yarn
   # rust
   cbindgen
-  
+
   ngrok
   maven
   apache-flink
@@ -148,17 +149,17 @@ binaries=(
   zlib
   solidity
   grpc
-  # automake 
-  berkeley-db@4 
-  # libtool 
+  # automake
+  berkeley-db@4
+  # libtool
   # flutter
   boost
   rocksdb
-  miniupnpc 
-  # openssl 
-  pkg-config 
-  protobuf 
-  qt5 
+  miniupnpc
+  # openssl
+  pkg-config
+  protobuf
+  qt5
   # libevent
   librsvg
   tldr
