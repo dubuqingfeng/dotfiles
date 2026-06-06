@@ -7,6 +7,6 @@
     "check": "node --check scripts/evm.mjs && node --check scripts/rpcs.mjs && node --check scripts/utils.mjs"
   },
   "dependencies": {
-    "viem": "^2.21.0"
+    "viem": "^2.51.3"
   }
 }
